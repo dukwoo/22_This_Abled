@@ -1,3 +1,14 @@
+/*new font*/
+@font-face{
+    src:url("../fonts/Binggrae.ttf");
+    font-family : "Binggrae";
+}
+
+body {
+    margin:0;
+    font-family: "Binggrae";
+}
+
 #nav {
     background-color: #ffee99;  
     color:darkgray;
@@ -7,7 +18,7 @@
     text-align:right;
 }
 
-td:hover {
+span:hover {
     color:#3c096c;    
 }
 
@@ -16,6 +27,3 @@ td:hover {
     padding-right:250px;
 }
 
-body {
-    margin:0
-}
