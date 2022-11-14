@@ -1,0 +1,21 @@
+#nav {
+    background-color: #ffee99;  
+    color:darkgray;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%; 
+    text-align:right;
+}
+
+td:hover {
+    color:#3c096c;    
+}
+
+#me {
+    text-align: right;
+    padding-right:250px;
+}
+
+body {
+    margin:0
+}
