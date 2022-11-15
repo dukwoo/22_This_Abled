@@ -1,15 +1,33 @@
+<!--navbar-->
 <table id="nav">
     <tr>
-        <td width="400px"><img src="static/firstapp/image/로고.png" width="150px" height="45px">
+        <td width="400px">
+            <a href="/">
+                <img src="static/firstapp/image/로고.png" width="150px" height="45px">
+            </a>
         </td>
-        <td width="70px" id="check" onclick="javascript:check()">
-            <span>검사</span>
+        <td width="70px" id="check_func"> 
+            <span id="check">검사</span>
         </td>
-        <td width="110px">
-            <span>커뮤니티</span>           
+        <td width="110px" id="com_func">
+            <span id="com">커뮤니티</span>    
         </td>
-        <td id="me">
-            <span>login</span>&nbsp;<i class="fas fa-caret-down"></i>
+        <td id="login_func">
+            <span id="me">login</span>&nbsp;<i class="fas fa-caret-down"></i>
         </td>
-    </tr>
+    </tr>    
 </table>
+
+<!--dropdown(check)-->
+<div id="check_drop">
+    <span>일자리</span>
+    <hr/>
+    <span>취미</span>
+</div>
+
+<!--dropdown(login)-->
+<div id="login_drop">
+    <span>내 계정</span>
+    <hr/>
+    <span>Log Out</span>
+</div>

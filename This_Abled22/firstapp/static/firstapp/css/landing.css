@@ -7,23 +7,5 @@
 body {
     margin:0;
     font-family: "Binggrae";
+    background-color: rgba(255, 255, 236, 0.54);
 }
-
-#nav {
-    background-color: #ffee99;  
-    color:darkgray;
-    font-size: 20px;
-    font-weight: bold;
-    width: 100%; 
-    text-align:right;
-}
-
-span:hover {
-    color:#3c096c;    
-}
-
-#me {
-    text-align: right;
-    padding-right:250px;
-}
-

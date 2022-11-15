@@ -4,9 +4,13 @@
     <head>
         <title>This_Abled</title>
 
-        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
-        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
-        
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+
+        <!--javascript-->
         <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -18,5 +22,57 @@
 
         <!--footer-->
         {% include 'firstapp/footer.html' %}
+
+
+        <!--javascript-->
+        <script src="static/firstapp/javascript/landing.js"></script>
+
+        <script>
+            var ch = document.getElementById("check");
+            var cm = document.getElementById("com");
+            var me = document.getElementById("me");
+
+            var cd = document.getElementById("check_drop");
+            var ld = document.getElementById("login_drop");
+
+            var ch_num = 0; var me_num = 0; 
+            
+            ch.addEventListener('click', () => {
+                ch_num += 1;
+
+                ch.style.color = "#3c096c";
+                cm.style.color = "#757575";
+                me.style.color = "#757575";
+
+                if (ch_num%2!=0) { //홀수
+                    cd.style.display = "block";
+                }
+                else {
+                    cd.style.display = "none";
+                }
+            })
+
+            me.addEventListener('click', () => {
+                me_num += 1;
+
+                ch.style.color = "#757575";
+                cm.style.color = "#757575";
+                me.style.color = "#3c096c";
+                
+                if (me_num%2!=0) { //홀수
+                    ld.style.display = "block";
+                }
+                else {
+                    ld.style.display = "none";
+                }
+            })
+
+            cm.addEventListener('click', () => {
+                ch.style.color = "#757575";
+                cm.style.color = "#3c096c";
+                me.style.color = "#757575";
+            })
+        </script>
+
     </body>
 </html>

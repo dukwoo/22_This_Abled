@@ -1,0 +1,41 @@
+#nav {
+    background-color: #ffee99;  
+    color:#757575;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%; 
+    text-align:right;
+}
+
+span:hover {
+    color:#3c096c;    
+}
+
+#login_func {
+    text-align: right;
+    padding-right:250px;
+}
+
+#check_drop {
+    display:none;
+    position:fixed; 
+    top:55px; left:430px; 
+    background-color:white; 
+    border:1px solid #757575; 
+    color: #757575;
+    font-weight:bold;
+    text-align:center;
+    width:60px; height:70px;
+}
+
+#login_drop {
+    display:none;
+    position:fixed; 
+    top:55px; right:255px; 
+    background-color:white; 
+    border:1px solid #757575; 
+    color: #757575;
+    font-weight:bold;
+    text-align:center;
+    width:75px; height:70px;
+}
