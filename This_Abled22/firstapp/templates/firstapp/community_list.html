@@ -4,7 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Community</title>
+        
         <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!--navbar-->
@@ -23,5 +28,10 @@
 
         <!--footer-->
         {% include 'firstapp/footer.html' %}
+
+        <!--javascript-->
+        <script src="static/firstapp/javascript/landing.js"></script>
+
+        
     </body>
 </html>
