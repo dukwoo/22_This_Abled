@@ -1,11 +1,27 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Community</title>
-</head>
-<body>
-    <p>community</p>
-</body>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Community</title>
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+
+        <!--main-->
+        <!-- Page header with logo and tagline-->
+        <header class="py-2 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">커뮤니티</h1>
+                    <p class="lead mb-0">환영합니다! 자유롭게 커뮤니티에서 소통하세요!</p>
+                </div>
+            </div>
+        </header>
+
+        <!--footer-->
+        {% include 'firstapp/footer.html' %}
+    </body>
 </html>

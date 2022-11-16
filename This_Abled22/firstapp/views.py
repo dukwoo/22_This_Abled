@@ -8,3 +8,9 @@ def landing(request):
         request,
         'firstapp/landing.html',
     )
+
+def community_list(request):
+    return render(
+        request,
+        'firstapp/community_list.html'
+    )
