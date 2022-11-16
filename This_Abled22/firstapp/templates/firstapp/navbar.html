@@ -15,7 +15,11 @@
                 <span id="com">커뮤니티</span>    
             </td>
             <td id="login_func">
+                {% if user.is_authenticated %}
+                <span id="me">logout</span>&nbsp;<i class="fas fa-caret-down"></i>
+                {% else %}
                 <span id="me">login</span>&nbsp;<i class="fas fa-caret-down"></i>
+                {% endif %}
             </td>
         </tr>    
     </table>
@@ -64,9 +68,9 @@
         {% endif %}
     </ul>
 </div>
+-->
 
-
- Modal
+<!--모달
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -95,4 +99,5 @@
         </div>
     </div>
 </div>
+
 -->
