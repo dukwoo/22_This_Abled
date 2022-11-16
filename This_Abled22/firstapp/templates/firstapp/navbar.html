@@ -15,11 +15,29 @@
                 <span id="com"><a href="/community_list/" style="text-decoration:none; text-decoration-color: darkgray">커뮤니티</a></span>    
             </td>
             <td id="login_func">
-                {% if user.is_authenticated %}
-                <span id="me">logout</span>&nbsp;<i class="fas fa-caret-down"></i>
-                {% else %}
-                <span id="me">login</span>&nbsp;<i class="fas fa-caret-down"></i>
-                {% endif %}
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="ture" aria-expanded="false">
+                            {% if user.socialaccount_set.all.0.get_avatar_url %}
+                            <img class="rounded-circle" width="25px" src="{{user.socialaccount_set.all.0.get_avatar_url}}">
+                            {% else %}
+                            <img class="rounded-circle" width="25px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
+                            {% endif %}
+                            {{ user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/accounts/logout/">Log Out</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a role="button" data-toggle="modal" data-target="#loginModal">
+                            Log In
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
             </td>
         </tr>    
     </table>
@@ -39,6 +57,8 @@
     </div>
 
 </div>
+
+
 
 <!--
 <div>
@@ -70,7 +90,7 @@
 </div>
 -->
 
-<!--모달
+<!--Modal-->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -83,8 +103,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <a role="button" class="btn btn-outline-dark btn-block btn-sm"
-                         href="{% provider_login_url 'google' %}">
+                        <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}">
                             <i class="fab fa-google"></i>&nbsp;&nbsp;Log in with Google</a>
                         <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/login/"><i class="far fa-envelope"></i>&nbsp;&nbsp;Log in with E-mail</a>
                     </div>
@@ -100,4 +119,3 @@
     </div>
 </div>
 
--->
