@@ -33,6 +33,7 @@ body {
 }
 
 #d_job {
+    animation: fadein 3s;
     background-color: #324158;
 }
 
@@ -61,7 +62,17 @@ body {
 
 #d_hobby {
     background-color: white;
-    border-style: 10px solid #324158;
+    border: thick solid #324158;
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .card {
