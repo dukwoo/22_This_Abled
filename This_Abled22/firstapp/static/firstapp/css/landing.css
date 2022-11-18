@@ -9,3 +9,90 @@ body {
     font-family: "Binggrae";
     background-color: rgba(255, 255, 236, 0.54);
 }
+
+/*일자리*/
+#c_job {
+    background-color: white;
+    color:#324158;
+    border:none;
+}
+
+#c_job:hover {
+    background-color: #ffee99;
+}
+
+#t_job {
+    color:white;
+}
+
+#b_job {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#d_job {
+    background-color: #324158;
+}
+
+/*취미*/
+#c_hobby { 
+    background-color: #324158;
+    border:none;
+    color: white;
+}
+
+#c_hobby:hover {
+    background-color: #ffee99;
+    color: #324158;
+}
+
+#t_hobby {
+    color:#324158;
+}
+
+#b_hobby {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#d_hobby {
+    background-color: white;
+    border-style: 10px solid #324158;
+}
+
+.card {
+    border-radius: 100px 100px 100px 100px;
+    font-size: 18px;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 18px;
+    width: 13rem; 
+    height: 3.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top:15px;
+}
+
+span {
+    text-align: center;
+}
+
+.col {
+    text-align: center;
+}
+
+.card-body {
+    font-weight: bold;
+}
+
+#t_share{
+    font-weight: bold;
+    margin-top:40px;
+}
+
