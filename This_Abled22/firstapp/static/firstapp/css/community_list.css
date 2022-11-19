@@ -11299,11 +11299,3 @@ body {
     font-family: "Binggrae";
     background-color: rgba(255, 255, 236, 0.54);
 }
-
-footer{
-    position: fixed;
-    left:0px; 
-    bottom:0px; 
-    height:60px; 
-    width:100%; 
-}
