@@ -2,10 +2,21 @@
 {% load static %}
 <html>
     <head>
-        <meta charset="UTF-8">
+        <!--title & logo-->
         <title>취미 게시판</title>
+        <link rel="shortcut icon" type="text/css" href="{% static 'firstapp/image/icon_logo.png' %}">
+
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
         
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
         <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
@@ -17,67 +28,23 @@
         {% include 'firstapp/navbar.html' %}
 
         <!--main-->
-        <div style="background-color: rgba(255, 255, 236, 0.54);">
-            <div class="row">
-                <div class="col-lg-3">
-                </div>
-                <div class="col-lg-6">
-                    <table>
-                        <tr>
-                            <td style="padding-left: 50px">
-                                <p style="padding-top: 10px; font-size: 18px;">
-                                    <a href="/community_list/" style="text-decoration: none; color:#3c096c">
-                                        카테고리
-                                    </a>
-                                </p>
-                            </td>
-                            <td style="padding-left: 20px">
-                                <p style="padding-top: 10px; font-size: 18px;">
-                                    <a href="#!" style="text-decoration: none; color:#3c096c">
-                                        전체 게시물
-                                    </a>
-                                </p>
-                            </td>
-                            <td style="padding-left: 20px">
-                                <p style="padding-top: 10px; font-size: 18px;">
-                                    <a href="#!" style="text-decoration: none; color:#3c096c">
-                                        내 게시물
-                                    </a>
-                                </p>
-                            </td>
-                            <td style="color: rgba(255, 255, 236, 0.54);">
-                                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                            </td>
-                            <td>
-                                <input class="form-control" id="search-input" type="text" placeholder="검색어를 입력하세요" aria-label="검색어를 입력하세요" aria-describedby="button-search" />
-                            </td>
-                            <td style="padding-top:10px">
-                                <button class="btn btn-sm" style="background-color:#FDF6AB;width:2.8em;height:2.8em;"><i class="fas fa-search"></i></button>
-                            </td>
-                        <tr>
-                    </table>
-                </div>
-                <div class="col-lg-3">
-                </div>
-            </div>
-        </div>
+        {% include 'firstapp/community_bar.html' %}
         <!--header-->
-        <header class="py-2 border-bottom mb-4" style="background-image: url({% static "firstapp/image/취미bg.jpg" %});">
+        <header class="py-2 border-bottom mb-4" style="background-image: url({% static "firstapp/image/취미_촬영_bg.jpg" %});">
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder" style="color:#ffffff">취미</h1>
-                    <p class="lead mb-0" style="font-size:20px;color:#ffffff">환영합니다! 취미 테스트 결과에 관하여 소통하는 게시판입니다.</p>
+                    <p class="lead mb-0" style="font-size:22px;color:#ffffff;padding-top:10px;">환영합니다! 취미 테스트 결과에 관하여 소통하는 게시판입니다.</p>
                 </div>
             </div>
         </header>
-
         <!-- Page content-->
-        <div class="container">
-            <div class="row" style="padding-bottom: 50px;">
+        <div>
+            <div class="row" style="width:90%; padding-bottom: 50px; padding-left:270px;">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-8">
-                    <div style="border: 1px solid black; border-radius: 1em;">
+                    <div style="border: 1px solid #3c096c; border-radius: 1em;">
                         <table>
                             <tr>
                                 <td style="padding-left: 20px">
@@ -160,7 +127,7 @@
                         <hr>
                         <table>
                             <tr>
-                                <td style="padding-left: 20px">
+                                <td style="padding-left: 20px; padding-right: 10px">
                                     <a href="/job_community/">
                                         <img src="{% static "firstapp/image/취미_게임_bg.jpg" %}" width="150em" height="100em">
                                     </a>
@@ -225,7 +192,7 @@
                                         <img src="{% static "firstapp/image/취미_미술_bg.png" %}" width="150em" height="100em">
                                     </a>
                                 </td>
-                                <td style="padding-left: 10px; padding-right: 10px">
+                                <td style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px">
                                     <p style="padding-top: 20px; font-size: 20px; font-weight: bold">
                                         <a href="/job_community/" style="text-decoration: none; color:#000000">
                                             미술
@@ -242,10 +209,9 @@
                 </div>
             </div>
         </div>
+        
         <!--footer-->
-        
         {% include 'firstapp/footer.html' %}
-        
         
         <!--javascript-->
         <script src={% static "firstapp/javascript/landing.js" %}></script>

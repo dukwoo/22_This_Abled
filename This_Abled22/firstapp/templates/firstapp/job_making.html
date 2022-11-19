@@ -5,7 +5,17 @@
         <meta charset="UTF-8">
         <title>일자리-제조 분야 커뮤니티</title>
         
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
         <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
@@ -17,6 +27,7 @@
         {% include 'firstapp/navbar.html' %}
 
         <!--main-->
+        {% include 'firstapp/community_bar.html' %}
         <!--header-->
         <header class="py-2 border-bottom mb-4" style="background-image: url({% static "firstapp/image/일자리_제조_bg.jpg" %});">
             <div class="container">
@@ -29,20 +40,41 @@
         </header>
 
         <!-- Page content-->
-        <div class="container">
-            <div class="row" style="padding-bottom: 50px;">
+        <div>
+            <div class="row" style="width:90%; padding-bottom: 250px; padding-left:270px;">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-8">
-                    <div style="border: 1px solid #3c096c; border-radius: 1em;">
+                    <div style="border: 1px solid #3c096c; border-radius: 0.5em;">
                         <table>
                             <tr>
-                                <td style="padding-left: 20px">
+                                <td style="font-weight:bold; color: #3c096c; padding-left: 20px; padding-top: 20px">
                                     제조 분야
                                 </td>
                             <tr>
                         </table>
-                        
+                        <hr>
+                        <table>
+                            <tr>
+                                <td style="padding-left: 20px;">
+                                    바리스타 자격증 학원
+                                </td>
+                                <td style="padding-left:10px;font-size:12px;color:darkgray">
+                                    October, 31, 2022
+                                </td>
+                            <tr>
+                        </table>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td style="padding-left: 20px; padding-bottom: 20px">
+                                    바리스타가 적성에 맞으시나요??
+                                </td>
+                                <td style="padding-left:10px;padding-bottom: 20px;font-size:12px;color:darkgray">
+                                    October, 25, 2022
+                                </td>
+                            <tr>
+                        </table>
                     </div>
                 <div class="col-lg-2">
                 </div>
