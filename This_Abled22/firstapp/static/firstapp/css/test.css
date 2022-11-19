@@ -54,11 +54,32 @@ label {
   {display: flex;
     justify-content: center;
     border: none;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
+    padding-right: 0%;
   }
+    .next
+    {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    #nextbtn
+    {
+        border-color: #3c096c;
+        background-color: white;
+        border-width: 2px;
 
+        color: #3c096c;
+    }
+    #nextbtn:hover
+    {
+        border-color: #3c096c;
+        background-color: #ffee99;
+        color: #3c096c;
+    }
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
+
+  
