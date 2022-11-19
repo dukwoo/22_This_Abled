@@ -15,6 +15,11 @@ def community_list(request):
         'firstapp/community_list.html'
     )
 
+def start_job_test(request):
+    return render(
+        request,
+        'firstapp/start_job_test.html'
+    )
 def job_community(request):
     return render(
         request,
