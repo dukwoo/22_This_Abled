@@ -1,19 +1,19 @@
 <!--navbar-->
 {% load socialaccount %}
-
+{% load static %}
 <div>
     <table id="nav">
         <tr>
             <td width="400px">
                 <a href="/">
-                    <img src="static/firstapp/image/로고.png" width="150px" height="45px">
+                    <img src={% static "firstapp/image/로고.png" %} width="150px" height="45px">
                 </a>
             </td>
             <td width="70px" id="check_func"> 
                 <span id="check">검사</span>
             </td>
             <td width="110px" id="com_func">
-                <span id="com">커뮤니티</span>    
+                <span id="com"><a href="/community_list/" style="text-decoration:none;">커뮤니티</span>    
             </td>
             <td id="login_func">
                 <ul class="navbar-nav ml-auto">

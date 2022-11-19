@@ -17,6 +17,10 @@
         <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
         <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
         <!--javascript-->
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
         <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -30,8 +34,8 @@
         <header class="py-2 border-bottom mb-4" style="background-color:#FFE566">
             <div class="container">
                 <div class="text-center my-5">
-                    <h1 class="fw-bolder">커뮤니티</h1>
-                    <p class="lead mb-0" style="font-size:20px">환영합니다! 자유롭게 커뮤니티에서 소통하세요!</p>
+                    <h1 class="fw-bolder" style="color:#3c096c">커뮤니티</h1>
+                    <p class="lead mb-0" style="font-size:20px;color:#3c096c">환영합니다! 자유롭게 커뮤니티에서 소통하세요!</p>
                 </div>
             </div>
         </header>
@@ -39,6 +43,8 @@
         <!-- Page content-->
         <div class="container">
             <div class="row">
+                <div class="col-lg-2">
+                </div>
                 <!-- Blog entries-->
                 <div class="col-lg-8">
                     <!-- Nested row for non-featured blog posts-->
@@ -46,97 +52,97 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/일자리bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <div class="small text-muted">October 31, 2022</div>
+                                    <h2 class="card-title h4">일자리</h2>
+                                    <p class="card-text">환영합니다! 일자리 테스트 결과에 관하여 소통하는 게시판입니다.</p>
+                                    <a class="btn btn-primary" href="/job_community/">Read more →</a>
+                                    
                                 </div>
                             </div>
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/공지사항bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <div class="small text-muted">October 20, 2022</div>
+                                    <h2 class="card-title h4">공지사항</h2>
+                                    <p class="card-text">This_Abled 커뮤니티의 공지사항을 업로드합니다.</p>
+                                    <a class="btn btn-primary" href="/notice_community/">Read more →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/관리자bg.jpg" %} alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">October 20, 2022</div>
+                                    <h2 class="card-title h4">관리자 전용</h2>
+                                    <p class="card-text">This_Abled 운영자 및 관리자를 위한 비공개 카테고리입니다.</p>
+                                    <a class="btn btn-primary" href="/admin_community/">Read more →</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/취미bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <div class="small text-muted">October 31, 2022</div>
+                                    <h2 class="card-title h4">취미</h2>
+                                    <p class="card-text">환영합니다! 취미 테스트 결과에 관하여 소통하는 게시판입니다.</p>
+                                    <a class="btn btn-primary" href="/hobby_community/">Read more →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/qna_bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <div class="small text-muted">October 20, 2022</div>
+                                    <h2 class="card-title h4">Q&A</h2>
+                                    <p class="card-text">문의에 대한 답변을 얻고 내 지식을 공유합니다.</p>
+                                    <a class="btn btn-primary" href="/qna_community/">Read more →</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
                 </div>
-                <!-- Side widgets-->
-                <div class="col-lg-4">
-                    <!-- Search widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Search</div>
-                        <div class="card-body">
-                            <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Categories widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Categories</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Web Design</a></li>
-                                        <li><a href="#!">HTML</a></li>
-                                        <li><a href="#!">Freebies</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">JavaScript</a></li>
-                                        <li><a href="#!">CSS</a></li>
-                                        <li><a href="#!">Tutorials</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Side widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Side Widget</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                    </div>
+                <div class="col-lg-2">
                 </div>
             </div>
         </div>
         <!--footer-->
+        
         <footer>
-        {% include 'firstapp/footer.html' %}
+            {% include 'firstapp/footer.html' %}
         </footer>
+        
+        <!--
+        <footer class="py-5">
+            <div>
+                <div id="footer">
+                    <div class="container py-4">
+                        <div class="row px-5">
+                            <div class="col text-left">
+                                상호명: (주)보도블록 | 대표: 임예진 | 대표 메일: thisabled@bodoblock.com <br/>
+                                사업장소재지: 서울특별시 도봉구 삼양로 144길 33 | 사업장등록번호: 123-45-67890 <br/>
+                                ​고객 문의: 카카오톡 플러스친구 '보도블록'
+                                <br/><br/><br/>
+                                ©2022 by This_Abled. Proudly created by 보도블록​ <br/>
+                                병아리 아이콘  제작자: Freepik - Flaticon <br/>
+                            </div>
+                            <div class="col text-right">
+                                <img src={% static "firstapp/image/foot_ins.png" %} width="35px" height="35px"> &nbsp;
+                                <img src={% static "firstapp/image/foot_fb.png" %} width="35px" height="35px"> &nbsp;
+                                <img src={% static "firstapp/image/foot_tw.png" %} width="35px" height="35px"> &nbsp;
+                                <img src={% static "firstapp/image/foot_lin.png" %} width="35px" height="35px"> &nbsp;        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        -->
         <!--javascript-->
-        <script src="static/firstapp/javascript/landing.js"></script>
+        <script src={% static "firstapp/javascript/landing.js" %}></script>
     </body>
 </html>
