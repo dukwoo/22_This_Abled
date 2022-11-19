@@ -31,34 +31,7 @@
         <!--navbar-->
         {% include 'firstapp/navbar.html' %}
 
-        <!--javascript-->
-                <!--main-->
-                <div class="container my-5 text-center">
-                    <div class="row">
-                        <!--일자리-->
-                        <div class="col">
-                            <div id="d_job" class="card" style="width: 24rem; margin-left: 340px;">
-                                <span>
-                                    <img id="b_job" src="{% static 'firstapp/image/병일자리.png' %}" alt="일자리_ThisAbled">
-                                </span>
-                                <div class="card-body">
-                                    <p id="t_job" class="card-text" style="font-size: 30px;">
-                                        일자리 테스트 <br>
-                                    </p>
-                                    <p id="t_job" class="card-text">
-                                        나에게 맞는 일자리를 추천 받아보세요! <br>
-                                    </p>
-                                    <a id="c_job" href="/job_test_1/" class="btn btn-primary rounded-pill">
-                                        시작하기 &nbsp; <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <!--취미-->
-                
-                    </div>
-                </div>
+        <img src="{% static 'firstapp/image/job_test_top.png' %}" width="100%">
 
                 {% include 'firstapp/footer.html' %}
 
