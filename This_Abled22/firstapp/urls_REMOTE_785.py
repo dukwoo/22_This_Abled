@@ -11,6 +11,4 @@ urlpatterns = [
     path('admin_community/', views.admin_community),
     path('start_job_test/', views.start_job_test),
     path('job_test_1/', views.job_test_1),
-    path('job_making/', views.job_making),
-    path('hobby_exercise/', views.hobby_exercise),
 ]

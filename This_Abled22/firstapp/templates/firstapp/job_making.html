@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>일자리-제조 분야 커뮤니티</title>
+        
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+
+        <!--main-->
+        <!--header-->
+        <header class="py-2 border-bottom mb-4" style="background-image: url({% static "firstapp/image/일자리_제조_bg.jpg" %});">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder" style="color:#ffffff">제조 분야</h1>
+                    <p class="lead mb-0" style="font-size:20px;color:#ffffff;padding-top:10px;">일자리 테스트 결과 "제조 분야"에 관하여 소통하는 게시판입니다!</p>
+                    <p class="lead mb-0" style="font-size:20px;color:#ffffff">자유롭게 글과 댓글을 작성해주세요.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content-->
+        <div class="container">
+            <div class="row" style="padding-bottom: 50px;">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8">
+                    <div style="border: 1px solid #3c096c; border-radius: 1em;">
+                        <table>
+                            <tr>
+                                <td style="padding-left: 20px">
+                                    제조 분야
+                                </td>
+                            <tr>
+                        </table>
+                        
+                    </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        
+        {% include 'firstapp/footer.html' %}
+        
+        
+        <!--javascript-->
+        <script src={% static "firstapp/javascript/landing.js" %}></script>
+    </body>
+</html>
