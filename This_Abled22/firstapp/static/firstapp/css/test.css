@@ -1,7 +1,7 @@
 label {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 2rem;
-    padding: 0.2em 0.4em;
+    /* padding: 0.2em 0.4em; */
   }
   
   span{
@@ -45,14 +45,18 @@ label {
   }
   
   /* Global CSS */
-  fieldset, .Q {
+  /* fieldset {
     display: flex;
-    justify-content: center;
     border: none;
     margin: 0;
+  } */
+  .q_table
+  {display: flex;
+    justify-content: center;
+    border: none;
     padding: 40px 20px;
   }
-  
+
   *,
   *::before,
   *::after {

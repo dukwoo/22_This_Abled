@@ -30,43 +30,63 @@
     <body>
         <!--navbar-->
         {% include 'firstapp/navbar.html' %}
-
         <img src="{% static 'firstapp/image/job_test_top.png' %}" width="100%">
-        <!--첫번째 질문-->
-        <div class="Q">Q. 평소에 누군가에게 음식을 만들어주거나 직접 만들어 먹는 것을 선호한다.</div>
-        {% include 'firstapp/question_check.html' %}
 
-        <!--두 번째 질문-->
-        <div class="Q">Q. 어르신이나 또는 사회 약자 분들께 봉사하고 뿌듯하다고 느낀 경우가 많다.</div>
-        {% include 'firstapp/question_check.html' %}
+        <table class="q_table">
+            <tr>
+                <td>
+                    <!--첫번째 질문-->
+                    <div >Q. 평소에 누군가에게 음식을 만들어주거나 직접 만들어 먹는 것을 선호한다.</div>
+                    {% include 'firstapp/question_check.html' %}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--두 번째 질문-->
+                    Q. 어르신이나 또는 사회 약자 분들께 봉사하고 뿌듯하다고 느낀 경우가 많다.</div>
+                    {% include 'firstapp/question_check.html' %}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--세 번째 질문-->
+                    Q. 평소 연주회를 가거나 악기를 연주하는 것을 즐긴다.</div>
+                    {% include 'firstapp/question_check.html' %}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--네 번째 질문-->
+                    <div >Q. 평소 주변인들에게 깔끔하게 정리한다 라는 말을 많이 듣는 편이다.</div>
+                    {% include 'firstapp/question_check.html' %}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--다섯 번째 질문-->
+                    <div>Q. 전자기기가 고장나면 스스로 분해하여 문제점을 찾는다.</div>
+                    {% include 'firstapp/question_check.html' %}
+                </td>
+            </tr>
+        </table>
+        
 
-        <!--세 번째 질문-->
-        <div class="Q">Q. 평소 연주회를 가거나 악기를 연주하는 것을 즐긴다.</div>
-        {% include 'firstapp/question_check.html' %}
-
-        <!--네 번째 질문-->
-        <div class="Q">Q. 평소 주변인들에게 깔끔하게 정리한다 라는 말을 많이 듣는 편이다.</div>
-        {% include 'firstapp/question_check.html' %}
-
-        <!--다섯 번째 질문-->
-        <div class="Q">Q. 전자기기가 고장나면 스스로 분해하여 문제점을 찾는다.</div>
-        {% include 'firstapp/question_check.html' %}
+        
 
 
-        {% include 'firstapp/question_check.html' %}
 
 
-                {% include 'firstapp/footer.html' %}
-                <!-- <div class="card-body">
-                    <p id="t_job" class="card-text" style="font-size: 30px;">
-                        일자리 테스트 <br>
-                    </p>
-                    <p id="t_job" class="card-text">
-                        나에게 맞는 일자리를 추천 받아보세요! <br>
-                    </p>
-                    <a id="c_job" href="/job_test_1/" class="btn btn-primary rounded-pill">
-                        시작하기 &nbsp; <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div> -->
+        {% include 'firstapp/footer.html' %}
+        <!-- <div class="card-body">
+            <p id="t_job" class="card-text" style="font-size: 30px;">
+                일자리 테스트 <br>
+            </p>
+            <p id="t_job" class="card-text">
+                나에게 맞는 일자리를 추천 받아보세요! <br>
+            </p>
+            <a id="c_job" href="/job_test_1/" class="btn btn-primary rounded-pill">
+                시작하기 &nbsp; <i class="fas fa-arrow-right"></i>
+            </a>
+        </div> -->
     </body>
 </html>
