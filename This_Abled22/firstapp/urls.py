@@ -9,4 +9,6 @@ urlpatterns = [
     path('notice_community/', views.notice_community),
     path('qna_community/', views.qna_community),
     path('admin_community/', views.admin_community),
+    path('job_making/', views.job_making),
+    path('hobby_exercise/', views.hobby_exercise),
 ]

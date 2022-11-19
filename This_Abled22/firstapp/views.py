@@ -44,3 +44,15 @@ def admin_community(request):
         request,
         'firstapp/admin_community.html'
     )
+
+def job_making(request):
+    return render(
+        request,
+        'firstapp/job_making.html'
+    )
+    
+def hobby_exercise(request):
+    return render(
+        request,
+        'firstapp/hobby_exercise.html'
+    )

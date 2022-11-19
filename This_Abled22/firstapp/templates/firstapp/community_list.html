@@ -17,9 +17,51 @@
         {% include 'firstapp/navbar.html' %}
 
         <!--main-->
-        <!-- Page header with logo and tagline-->
-        <!--<img src="{% static 'firstapp/image/community_header.png'%}" />-->
-        
+        <div style="background-color: rgba(255, 255, 236, 0.54);">
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-6">
+                    <table>
+                        <tr>
+                            <td style="padding-left: 50px">
+                                <p style="padding-top: 10px; font-size: 18px;">
+                                    <a href="/community_list/" style="text-decoration: none; color:#3c096c">
+                                        카테고리
+                                    </a>
+                                </p>
+                            </td>
+                            <td style="padding-left: 20px">
+                                <p style="padding-top: 10px; font-size: 18px;">
+                                    <a href="#!" style="text-decoration: none; color:#3c096c">
+                                        전체 게시물
+                                    </a>
+                                </p>
+                            </td>
+                            <td style="padding-left: 20px">
+                                <p style="padding-top: 10px; font-size: 18px;">
+                                    <a href="#!" style="text-decoration: none; color:#3c096c">
+                                        내 게시물
+                                    </a>
+                                </p>
+                            </td>
+                            <td style="color: rgba(255, 255, 236, 0.54);">
+                                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            </td>
+                            <td>
+                                <input class="form-control" id="search-input" type="text" placeholder="검색어를 입력하세요" aria-label="검색어를 입력하세요" aria-describedby="button-search" />
+                            </td>
+                            <td style="padding-top:10px">
+                                <button class="btn btn-sm" style="background-color:#FDF6AB;width:2.8em;height:2.8em;"><i class="fas fa-search"></i></button>
+                            </td>
+                        <tr>
+                    </table>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+        </div>
+        <!--header-->
         <header class="py-2 border-bottom mb-4" style="background-color:#FFE566">
             <div class="container">
                 <div class="text-center my-5">
@@ -31,65 +73,57 @@
 
         <!-- Page content-->
         <div class="container">
-            <div class="row">
+            <div class="row" style="padding-bottom:50px;">
                 <div class="col-lg-2">
                 </div>
-                <!-- Blog entries-->
                 <div class="col-lg-8">
-                    <!-- Nested row for non-featured blog posts-->
                     <div class="row">
                         <div class="col-lg-6">
-                            <!-- Blog post-->
+                            <!--post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/일자리bg.jpg" %} alt="..." /></a>
+                                <a href="/job_community/"><img class="card-img-top" src={% static "firstapp/image/일자리bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">October 31, 2022</div>
-                                    <h2 class="card-title h4">일자리</h2>
-                                    <p class="card-text">환영합니다! 일자리 테스트 결과에 관하여 소통하는 게시판입니다.</p>
-                                    <a class="btn btn-primary" href="/job_community/">Read more →</a>
-                                    
+                                    <h2 class="card-title h4" style="padding-top:10px; padding-bottom:10px">일자리</h2>
+                                    <p class="small">환영합니다! 일자리 테스트 결과에 관하여 소통하는 게시판입니다.</p>
                                 </div>
                             </div>
-                            <!-- Blog post-->
+                            <!--post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/공지사항bg.jpg" %} alt="..." /></a>
+                                <a href="/notice_community/"><img class="card-img-top" src={% static "firstapp/image/공지사항bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">October 20, 2022</div>
-                                    <h2 class="card-title h4">공지사항</h2>
-                                    <p class="card-text">This_Abled 커뮤니티의 공지사항을 업로드합니다.</p>
-                                    <a class="btn btn-primary" href="/notice_community/">Read more →</a>
+                                    <h2 class="card-title h4" style="padding-top:10px; padding-bottom:10px">공지사항</h2>
+                                    <p class="small">This_Abled 커뮤니티의 공지사항을 업로드합니다.</p>
                                 </div>
                             </div>
-                            <!-- Blog post-->
+                            <!--post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/관리자bg.jpg" %} alt="..." /></a>
+                                <a href="/admin_community/"><img class="card-img-top" src={% static "firstapp/image/관리자bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">October 20, 2022</div>
-                                    <h2 class="card-title h4">관리자 전용</h2>
-                                    <p class="card-text">This_Abled 운영자 및 관리자를 위한 비공개 카테고리입니다.</p>
-                                    <a class="btn btn-primary" href="/admin_community/">Read more →</a>
+                                    <h2 class="card-title h4" style="padding-top:10px; padding-bottom:10px">관리자 전용</h2>
+                                    <p class="small">This_Abled 운영자 및 관리자를 위한 비공개 카테고리입니다.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <!-- Blog post-->
+                            <!--post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/취미bg.jpg" %} alt="..." /></a>
+                                <a href="/hobby_community/"><img class="card-img-top" src={% static "firstapp/image/취미bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">October 31, 2022</div>
-                                    <h2 class="card-title h4">취미</h2>
-                                    <p class="card-text">환영합니다! 취미 테스트 결과에 관하여 소통하는 게시판입니다.</p>
-                                    <a class="btn btn-primary" href="/hobby_community/">Read more →</a>
+                                    <h2 class="card-title h4" style="padding-top:10px; padding-bottom:10px">취미</h2>
+                                    <p class="small">환영합니다! 취미 테스트 결과에 관하여 소통하는 게시판입니다.</p>
                                 </div>
                             </div>
-                            <!-- Blog post-->
+                            <!--post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={% static "firstapp/image/qna_bg.jpg" %} alt="..." /></a>
+                                <a href="/qna_community/"><img class="card-img-top" src={% static "firstapp/image/qna_bg.jpg" %} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">October 20, 2022</div>
-                                    <h2 class="card-title h4">Q&A</h2>
-                                    <p class="card-text">문의에 대한 답변을 얻고 내 지식을 공유합니다.</p>
-                                    <a class="btn btn-primary" href="/qna_community/">Read more →</a>
+                                    <h2 class="card-title h4" style="padding-top:10px; padding-bottom:10px">Q&A</h2>
+                                    <p class="small">문의에 대한 답변을 얻고 내 지식을 공유합니다.</p>
                                 </div>
                             </div>
                         </div>
@@ -101,36 +135,9 @@
         </div>
         <!--footer-->
         
-        <footer>
-            {% include 'firstapp/footer.html' %}
-        </footer>
+        {% include 'firstapp/footer.html' %}
         
-        <!--
-        <footer class="py-5">
-            <div>
-                <div id="footer">
-                    <div class="container py-4">
-                        <div class="row px-5">
-                            <div class="col text-left">
-                                상호명: (주)보도블록 | 대표: 임예진 | 대표 메일: thisabled@bodoblock.com <br/>
-                                사업장소재지: 서울특별시 도봉구 삼양로 144길 33 | 사업장등록번호: 123-45-67890 <br/>
-                                ​고객 문의: 카카오톡 플러스친구 '보도블록'
-                                <br/><br/><br/>
-                                ©2022 by This_Abled. Proudly created by 보도블록​ <br/>
-                                병아리 아이콘  제작자: Freepik - Flaticon <br/>
-                            </div>
-                            <div class="col text-right">
-                                <img src={% static "firstapp/image/foot_ins.png" %} width="35px" height="35px"> &nbsp;
-                                <img src={% static "firstapp/image/foot_fb.png" %} width="35px" height="35px"> &nbsp;
-                                <img src={% static "firstapp/image/foot_tw.png" %} width="35px" height="35px"> &nbsp;
-                                <img src={% static "firstapp/image/foot_lin.png" %} width="35px" height="35px"> &nbsp;        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        -->
+        
         <!--javascript-->
         <script src={% static "firstapp/javascript/landing.js" %}></script>
     </body>

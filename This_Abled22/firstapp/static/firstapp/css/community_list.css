@@ -11299,3 +11299,12 @@ body {
     font-family: "Binggrae";
     background-color: rgba(255, 255, 236, 0.54);
 }
+
+footer {
+  padding-top: 100px;
+  position: absolute;
+  left:0px; 
+    bottom:0px; 
+    height:60px; 
+    width:100%; 
+}
