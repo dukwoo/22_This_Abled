@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>일자리 테스트하러 가기</title>
+        <link href="{% static 'firstapp/css/job_test_result.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/test.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
@@ -30,6 +31,30 @@
     <body>
         <!--navbar-->
         {% include 'firstapp/navbar.html' %}
+        <table class="resultT">
+            <tr>
+                <td class="t">
+                    <div class="title">일자리 테스트 결과</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="t">
+                    <div class="content">나의 적성에 딱 맞는 일자리 분야는<br>
+
+                        <span class="field">​음식 제조 분야</span>&nbsp;입니다.</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="t">
+                    <div class="last">내 주변에 있는 추천 일자리를 알아봐요!</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="t">
+                    <img src="{% static 'firstapp/image/job_test_result.png' %}" width="50%" style="margin-bottom: 50px;">
+                </td>
+            </tr>
+        </table>
     
 
 
