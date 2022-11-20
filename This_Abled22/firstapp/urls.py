@@ -15,4 +15,7 @@ urlpatterns = [
     path('hobby_exercise/', views.hobby_exercise),
     path('job_making_post1/', views.job_making_post1),
     path('hobby_exercise_post1/', views.hobby_exercise_post1),
+    path('notice_post1/', views.notice_post1),
+    path('qna_post1/', views.qna_post1),
+    path('admin_post1/', views.admin_post1),
 ]

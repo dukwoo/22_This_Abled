@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>바리스타 자격증 학원</title>
+        
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+
+        <!--main-->
+        {% include 'firstapp/community_bar.html' %}
+        <!--header-->
+
+        <!-- Page content-->
+        <div>
+            <div class="row" style="width:100%; padding-top: 15px; padding-bottom: 50px; padding-left:7em">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-5" style="padding-top: 20px; border: 1px solid #3c096c; border-radius: 0.5em;">
+                    <table style="margin: 10px;">
+                        <tr>
+                            <td>
+                                <h3>바리스타 자격증 학원</h3>
+                                <p style="padding-left:0px;font-size:14px;color:darkgray">
+                                    October, 31, 2022
+                                </p>
+                                <div style="font-size:18px"><a href="/job_making/" style="text-decoration: none;">게시판: 제조 분야</div>
+                                <hr>
+                                <p style="color: black; padding-top:10px; padding-bottom: 20px; font-size:17px">일자리 검사를 했는데 추천 직업이 바리스타가 나와서 여기저기 검색해봤습니다.
+                                    자격증을 따려고 하는데 추천하는 학원 있으신가요?? 어디로 가야할지 고민이네요...😅
+                                </p>
+                                <div><i class="fas fa-heart"></i>  0</div>
+                                <hr>
+                                <div style="font-size:18px; color:black">댓글</div>
+                            </td>
+                        <tr>
+                    </table>
+                </div>
+                <div class="col-lg-3" style="padding-top: 0px; padding-left:4em">
+                    <button class="btn btn-primary" id="button-search" type="button" style="height:2.5em; border-radius:0.5em">댓글</button>
+                    <button class="btn" id="button-follow" type="button" style="height:2.5em; border-radius:0.5em"><i class="fas fa-bell"></i>  게시물 팔로우</button>
+                </div>
+                
+                <div class="col-lg-2">
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        
+        {% include 'firstapp/footer.html' %}
+        
+        
+        <!--javascript-->
+        <script src={% static "firstapp/javascript/landing.js" %}></script>
+    </body>
+</html>

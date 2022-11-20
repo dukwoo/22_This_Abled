@@ -2,8 +2,80 @@
 {% load static %}
 <html>
     <head>
+        <meta charset="UTF-8">
+        <title>Q&A</title>
+        
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
     </head>
     <body>
-<h1>qna 커뮤니티 페이지</h1>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+
+        <!--main-->
+        {% include 'firstapp/community_bar.html' %}
+        <!--header-->
+        <header class="py-2 border-bottom mb-4" style="background-image: url({% static "firstapp/image/qna_bg.jpg" %});">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder" style="color:#ffffff">Q&A</h1>
+                    <p class="lead mb-0" style="font-size:20px;color:#ffffff;padding-top:10px;">문의에 대한 답변을 얻고 내 지식을 공유합니다.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content-->
+        <div>
+            <div class="row" style="width:100%; padding-bottom: 50px; padding-left:5em">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8">
+                    <div style="border: 1px solid #3c096c; border-radius: 0.5em;">
+                        <table>
+                            <tr>
+                                <td style="font-weight:bold; color: #3c096c; padding-left: 20px; padding-top: 20px">
+                                    Q&A
+                                </td>
+                            <tr>
+                        </table>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td style="padding-left: 20px;padding-bottom: 20px;">
+                                    <a href="/qna_post1/" style="text-decoration: none; color:#000000">
+                                        닉네임 수정이 안되네요
+                                    </a>
+                                </td>
+                                <td style="padding-left:10px;padding-bottom: 20px;font-size:12px;color:darkgray">
+                                    October, 30, 2022
+                                </td>
+                            <tr>
+                        </table>
+                    </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        
+        {% include 'firstapp/footer.html' %}
+        
+        
+        <!--javascript-->
+        <script src={% static "firstapp/javascript/landing.js" %}></script>
     </body>
 </html>
