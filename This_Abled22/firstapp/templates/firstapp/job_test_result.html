@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>일자리 테스트하러 가기</title>
+        <link href="{% static 'firstapp/css/test.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="text/css" href="{% static 'firstapp/image/icon_logo.png' %}">
+
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+    
+
+
+        {% include 'firstapp/footer.html' %}
+        
+    </body>
+</html>

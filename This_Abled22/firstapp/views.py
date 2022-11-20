@@ -61,9 +61,15 @@ def start_job_test(request):
         request,
         'firstapp/start_job_test.html'
     )
-    
+
 def job_test_1(request):
     return render(
         request,
         'firstapp/job_test_1.html'
+    )
+
+def job_test_result(request):
+    return render(
+        request,
+        'firstapp/job_test_result.html'
     )
