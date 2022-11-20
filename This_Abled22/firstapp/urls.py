@@ -13,10 +13,7 @@ urlpatterns = [
     path('job_test_1/', views.job_test_1),
     path('job_making/', views.job_making),
     path('hobby_exercise/', views.hobby_exercise),
-<<<<<<< HEAD
     path('job_test_result/', views.job_test_result),
-=======
     path('job_making_post1/', views.job_making_post1),
     path('hobby_exercise_post1/', views.hobby_exercise_post1),
->>>>>>> 6f9b722242f9547d453ce507be23537f6eada7b4
 ]
