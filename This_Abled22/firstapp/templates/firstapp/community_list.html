@@ -28,56 +28,13 @@
         {% include 'firstapp/navbar.html' %}
 
         <!--main-->
-        <div style="background-color: rgba(255, 255, 236, 0.54);">
-            <div class="row">
-                <div class="col-lg-3">
-                </div>
-                <div class="col-lg-6">
-                    <table>
-                        <tr>
-                            <td style="padding-left: 50px">
-                                <p style="padding-top: 10px; font-size: 18px;">
-                                    <a href="/community_list/" style="text-decoration: none; color:#3c096c">
-                                        카테고리
-                                    </a>
-                                </p>
-                            </td>
-                            <td style="padding-left: 20px">
-                                <p style="padding-top: 10px; font-size: 18px;">
-                                    <a href="#!" style="text-decoration: none; color:#3c096c">
-                                        전체 게시물
-                                    </a>
-                                </p>
-                            </td>
-                            <td style="padding-left: 20px">
-                                <p style="padding-top: 10px; font-size: 18px;">
-                                    <a href="#!" style="text-decoration: none; color:#3c096c">
-                                        내 게시물
-                                    </a>
-                                </p>
-                            </td>
-                            <td style="color: rgba(255, 255, 236, 0.54);">
-                                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                            </td>
-                            <td>
-                                <input class="form-control" id="search-input" type="text" placeholder="검색어를 입력하세요" aria-label="검색어를 입력하세요" aria-describedby="button-search" />
-                            </td>
-                            <td style="padding-top:10px">
-                                <button class="btn btn-sm" style="background-color:#FDF6AB;width:2.8em;height:2.8em;"><i class="fas fa-search"></i></button>
-                            </td>
-                        <tr>
-                    </table>
-                </div>
-                <div class="col-lg-3">
-                </div>
-            </div>
-        </div>
+        {% include 'firstapp/community_bar.html' %}
         <!--header-->
         <header class="py-2 border-bottom mb-4" style="background-color:#FFE566">
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder" style="color:#3c096c">커뮤니티</h1>
-                    <p class="lead mb-0" style="font-size:20px;color:#3c096c">환영합니다! 자유롭게 커뮤니티에서 소통하세요!</p>
+                    <p class="lead mb-0" style="font-size:22px;color:#3c096c;padding-top:10px;">환영합니다! 자유롭게 커뮤니티에서 소통하세요!</p>
                 </div>
             </div>
         </header>

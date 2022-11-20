@@ -73,3 +73,15 @@ def job_test_result(request):
         request,
         'firstapp/job_test_result.html'
     )
+    
+def job_making_post1(request):
+    return render(
+        request,
+        'firstapp/job_making_post1.html'
+    )
+    
+def hobby_exercise_post1(request):
+    return render(
+        request,
+        'firstapp/hobby_exercise_post1.html'
+    )
