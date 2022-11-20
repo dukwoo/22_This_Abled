@@ -1,0 +1,30 @@
+#total {
+    margin: 0px 250px 0px 250px;
+    padding: 20px;
+    background-color: #324158;
+}
+#total_header {
+    height: 150px;
+}
+#total_bottom {
+    height: 120px;
+    padding: 15px 0px 0px 30px;
+    vertical-align: text-bottom;
+}
+#total_text {
+    color: white;
+    font-size: 35px;
+    padding-left: 30px;
+    vertical-align: bottom;
+}
+
+#bottom {
+    margin: 0px 250px 0px 250px;
+    padding: 20px;
+}
+.btnCon:target  {
+    background : #ccc;
+}
+.btnCon:target .tabCon{
+    display: block;
+}

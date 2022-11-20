@@ -95,3 +95,10 @@ def admin_post1(request):
         request,
         'firstapp/admin_post1.html'
     )
+    
+def mypage(request):
+    return render(
+        request,
+        'firstapp/mypage.html'
+    )
+    
