@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>일자리 테스트하러 가기</title>
+        
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="text/css" href="{% static 'firstapp/image/icon_logo.png' %}">
+
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+
+        <!--javascript-->
+                <!--main-->
+                
+                <div class="container my-5 text-center">
+                    <div class="row">
+                        <!--일자리-->
+                        <div class="col">
+                            <div id="d_hobby" class="card" style="width: 24rem; margin-left: 340px;">
+                                <span>
+                                    <img id="b_hobby" src="{% static 'firstapp/image/병취미.png' %}" alt="취미_ThisAbled">
+                                </span>
+                                <div class="card-body">
+                                    <p id="t_hobby" class="card-text" style="font-size: 30px;">
+                                        취미 테스트
+                                    </p>
+                                    <p id="t_hobby" class="card-text">
+                                        나에게 맞는 취미를 추천 받아보세요!
+                                    </p>
+                                    <a id="c_hobby" href="#" class="btn btn-primary rounded-pill">
+                                        시작하기 &nbsp; <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--취미-->
+                
+                    </div>
+                </div>
+
+                {% include 'firstapp/footer.html' %}
+
+    </body>
+</html>

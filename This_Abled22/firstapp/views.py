@@ -101,3 +101,8 @@ def admin_post1(request):
         request,
         'firstapp/admin_post1.html'
     )
+def start_hobby_test(request):
+    return render(
+        request,
+        'firstapp/start_hobby_test.html'
+    )

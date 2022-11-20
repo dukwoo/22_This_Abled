@@ -19,4 +19,5 @@ urlpatterns = [
     path('notice_post1/', views.notice_post1),
     path('qna_post1/', views.qna_post1),
     path('admin_post1/', views.admin_post1),
+    path('start_hobby_test/', views.start_hobby_test),
 ]
