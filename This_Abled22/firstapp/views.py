@@ -101,7 +101,6 @@ def admin_post1(request):
         request,
         'firstapp/admin_post1.html'
     )
-<<<<<<< HEAD
     
 def mypage(request):
     return render(
@@ -109,10 +108,3 @@ def mypage(request):
         'firstapp/mypage.html'
     )
     
-=======
-def start_hobby_test(request):
-    return render(
-        request,
-        'firstapp/start_hobby_test.html'
-    )
->>>>>>> d155fb3db881e318e7eedb1e266588fccec9f332

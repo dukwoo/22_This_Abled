@@ -19,9 +19,5 @@ urlpatterns = [
     path('notice_post1/', views.notice_post1),
     path('qna_post1/', views.qna_post1),
     path('admin_post1/', views.admin_post1),
-<<<<<<< HEAD
     path('mypage/', views.mypage),
-=======
-    path('start_hobby_test/', views.start_hobby_test),
->>>>>>> d155fb3db881e318e7eedb1e266588fccec9f332
 ]
