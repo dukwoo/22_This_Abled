@@ -1,0 +1,29 @@
+.resultT
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.t
+{
+    text-align: center;
+    padding-top: 20px;
+}
+.title
+{
+    font-size: 28px;
+}
+.field
+{
+    color: #3c096c;
+    font-weight: bold;
+}
+.content
+{
+    font-size: 18px;
+}
+.last
+{
+    font-size: 15px;
+}

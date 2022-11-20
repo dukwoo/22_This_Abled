@@ -61,11 +61,17 @@ def start_job_test(request):
         request,
         'firstapp/start_job_test.html'
     )
-    
+
 def job_test_1(request):
     return render(
         request,
         'firstapp/job_test_1.html'
+    )
+
+def job_test_result(request):
+    return render(
+        request,
+        'firstapp/job_test_result.html'
     )
     
 def job_making_post1(request):
@@ -95,6 +101,7 @@ def admin_post1(request):
         request,
         'firstapp/admin_post1.html'
     )
+<<<<<<< HEAD
     
 def mypage(request):
     return render(
@@ -102,3 +109,10 @@ def mypage(request):
         'firstapp/mypage.html'
     )
     
+=======
+def start_hobby_test(request):
+    return render(
+        request,
+        'firstapp/start_hobby_test.html'
+    )
+>>>>>>> d155fb3db881e318e7eedb1e266588fccec9f332
