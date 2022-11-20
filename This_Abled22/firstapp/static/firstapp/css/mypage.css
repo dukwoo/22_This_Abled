@@ -22,6 +22,7 @@
     margin: 0px 250px 0px 250px;
     padding: 20px;
     font-size: 17px;
+    background-color: white;
 }
 #css_tabs input:nth-of-type(1), #css_tabs input:nth-of-type(1)~div:nth-of-type(1),
 #css_tabs input:nth-of-type(2), #css_tabs input:nth-of-type(2)~div:nth-of-type(2),
@@ -36,6 +37,9 @@
 #css_tabs input:nth-of-type(4):checked~div:nth-of-type(4),
 #css_tabs input:nth-of-type(5):checked~div:nth-of-type(5){
     display: block;
+    padding-left: 30px;
+    padding-top: 50px;
+    font-size: 15px;
 }
 
 #css_tabs>label{
@@ -60,7 +64,8 @@
 #css_tabs input:nth-of-type(5):checked~label:nth-of-type(5), #css_tabs>label[for=tab5]:hover{
     color: #F0C01A;
 }
-#tab1_context{
-    background-color: #324158;
-    margin: 30px;
+.button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
 }
