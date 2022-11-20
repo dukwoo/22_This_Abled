@@ -108,3 +108,8 @@ def mypage(request):
         'firstapp/mypage.html'
     )
     
+def loginpage(request):
+    return render(
+        request,
+        'firstapp/loginpage.html'
+    )

@@ -20,4 +20,5 @@ urlpatterns = [
     path('qna_post1/', views.qna_post1),
     path('admin_post1/', views.admin_post1),
     path('mypage/', views.mypage),
+    path('loginpage/', views.loginpage),
 ]

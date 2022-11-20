@@ -34,7 +34,11 @@
                 <a><img src={% static "firstapp/image/camerabtn.png" %} width="40px"></a>
             </div>
             <div id="total_bottom">
-                <img class="rounded-circle" width="100px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
+                {% if user.socialaccount_set.all.0.get_avatar_url %}
+                    <img class="rounded-circle" width="100px" src="{{user.socialaccount_set.all.0.get_avatar_url}}">
+                {% else %}
+                    <img class="rounded-circle" width="100px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
+                {% endif %}
                 <span id="total_text">{{ user.username }}</span>
             </div>
         </div>
@@ -70,7 +74,7 @@
                     <br>
                     <h5>계정</h5>
                     <p>개인정보를 업데이트하세요.</p>
-                    <a>로그인 이메일: bodoblock@gmail.com</a><br>
+                    <a>로그인 이메일: {{ user.email }}</a><br>
                     <a style="color: gray;">(로그인 이메일은 변경할 수 없습니다.)</a>
 
                     <br><br>
@@ -78,6 +82,8 @@
                         <button style="background-color: transparent; border: 0; outline: 0;"><img src={% static "firstapp/image/btn_cancle.png" %} width="120px"></button>
                         <button style="background-color: transparent; border: 0; outline: 0;"><img src={% static "firstapp/image/btn_update.png" %} width="120px"></button>
                     </a>
+                    <br><br>
+                    <a href="/accounts/logout/">Log Out</a>
                     
                 </div>
                 <div class="tab2_context">
