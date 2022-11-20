@@ -85,3 +85,19 @@ def hobby_exercise_post1(request):
         request,
         'firstapp/hobby_exercise_post1.html'
     )
+
+def notice_post1(request):
+    return render(
+        request,
+        'firstapp/notice_post1.html'
+    )
+def qna_post1(request):
+    return render(
+        request,
+        'firstapp/qna_post1.html'
+    )
+def admin_post1(request):
+    return render(
+        request,
+        'firstapp/admin_post1.html'
+    )

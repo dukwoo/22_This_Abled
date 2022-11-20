@@ -11307,3 +11307,13 @@ footer {
   height:60px; 
   width:100%; 
 }
+
+#button-follow {
+  color: #3c096c;
+  border: 1px solid #3c096c; 
+}
+#button-follow:hover {
+  color: #000;
+  background-color: #FFE566;
+  border-color: #FFE566;
+}
