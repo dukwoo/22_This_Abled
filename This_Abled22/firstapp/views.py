@@ -106,3 +106,8 @@ def start_hobby_test(request):
         request,
         'firstapp/start_hobby_test.html'
     )
+def hobby_test_result(request):
+    return render(
+        request,
+        'firstapp/hobby_test_result.html'
+    )

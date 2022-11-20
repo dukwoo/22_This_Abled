@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>일자리 테스트하러 가기</title>
+        <link href="{% static 'firstapp/css/job_test_result.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/test.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="text/css" href="{% static 'firstapp/image/icon_logo.png' %}">
+
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+        <table class="resultT">
+            <tr>
+                <td class="t">
+                    <div class="title">취미 테스트 결과</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="t">
+                    <div class="content">나의 적성에 딱 맞는 취미는<br>
+
+                        <span class="field">뮤지컬/연극/영화 감상</span>&nbsp;입니다.</div>
+                </td>
+            </tr>
+        
+        </table>
+        <table class="resultT" style="margin-bottom: 25px;">
+            <tr>
+                <td>
+                    <iframe width="360" height="230" src="https://www.youtube.com/embed/kihrFxwdMb4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </td>
+                <td >
+                    <iframe width="360" height="230" src="https://www.youtube.com/embed/9lLtDny7P9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
+                </td>  
+            </tr>
+                <td>
+                    <iframe width="360" height="230" src="https://www.youtube.com/embed/RRGFJrik_cY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+                <td>
+                    <iframe width="360" height="230" src="https://www.youtube.com/embed/YR1Zbm4upL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+            <tr>
+                <td>
+                    <iframe width="360" height="230" src="https://www.youtube.com/embed/WlF5jNCz7jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+                <td>
+                    <iframe width="360" height="230" src="https://www.youtube.com/embed/mK8GiTBnFq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+            <tr>
+        </table>
+        <div class="next">
+            
+            <a id="nextbtn" class="btn rounded-pill" style="width: 110px; height:45px; font-size:17px; padding-top: 8px; background-color: #3c096c; color: white;">
+                더보기
+            </a>
+        </div>
+
+
+
+        {% include 'firstapp/footer.html' %}
+        
+    </body>
+</html>

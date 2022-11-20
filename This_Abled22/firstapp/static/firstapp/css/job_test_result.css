@@ -27,3 +27,8 @@
 {
     font-size: 15px;
 }
+iframe
+{
+    border-radius: 30px 30px 30px 30px;
+    padding: 15px;
+}
