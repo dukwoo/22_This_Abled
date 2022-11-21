@@ -26,4 +26,6 @@ urlpatterns = [
     path('job_test_3/', views.job_test_3),
     path('job_test_4/', views.job_test_4),
     path('loginpage/', views.loginpage),
+    path('hobby_musical/', views.hobby_musical),
+    path('hobby_musical_post1/', views.hobby_musical_post1),
 ]

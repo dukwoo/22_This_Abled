@@ -32,3 +32,8 @@ iframe
     border-radius: 30px 30px 30px 30px;
     padding: 15px;
 }
+#btn_hobby_result {
+    color: #fff;
+    border: 1px solid #3c096c; 
+    background-color: #3c096c;
+}
