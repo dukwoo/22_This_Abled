@@ -10,6 +10,11 @@ body {
     background-color: rgba(255, 255, 236, 0.54);
 }
 
+#main_word {
+    color:#324158;
+    animation: fadein 3s;
+}
+
 /*일자리*/
 #c_job {
     background-color: white;

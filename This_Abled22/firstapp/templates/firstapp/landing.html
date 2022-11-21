@@ -25,6 +25,17 @@
 
         <!--main-->
         <div class="container my-5 text-center">
+            <!--대문페이지 문구-->
+            <div class="row my-5">
+                <div class="col">
+                    <div id="main_word">
+                        <h3>장애인들의 인생 가이드 </h3>
+                        <br>
+                        <h6>This_Abled</h6>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <!--일자리-->
                 <div class="col">
@@ -63,6 +74,7 @@
                 </div>
             </div>
 
+            <!--SNS공유-->
             <div class="row">
                 <div class="col">
                     <p id="t_share">---- SNS 공유하기 ----</p>
@@ -77,14 +89,9 @@
         <!--footer-->
         {% include 'firstapp/footer.html' %}
 
-
-        <!--javascript-->
-        <script src="static/firstapp/javascript/landing.js"></script>
-
         <script>
             //landing.js 내용
             var ch = document.getElementById("check");
-            var cm = document.getElementById("com");
             var me = document.getElementById("me");
 
             var cd = document.getElementById("check_drop");
@@ -92,11 +99,10 @@
 
             var ch_num = 0; var me_num = 0; 
             
-            ch.addEventListener('click', () => {
+            function check() {
                 ch_num += 1;
 
                 ch.style.color = "#3c096c";
-                cm.style.color = "#757575";
                 me.style.color = "#757575";
 
                 if (ch_num%2!=0) { //홀수
@@ -105,27 +111,20 @@
                 else {
                     cd.style.display = "none";
                 }
-            })
+            }
 
             me.addEventListener('click', () => {
                 me_num += 1;
-
-                ch.style.color = "#757575";
-                cm.style.color = "#757575";
-                me.style.color = "#3c096c";
                 
+                ch.style.color = "#757575";
+                me.style.color = "#3c096c"
+
                 if (me_num%2!=0) { //홀수
                     ld.style.display = "block";
                 }
                 else {
                     ld.style.display = "none";
                 }
-            })
-
-            cm.addEventListener('click', () => {
-                ch.style.color = "#757575";
-                cm.style.color = "#3c096c";
-                me.style.color = "#757575";
             })
         </script>
 

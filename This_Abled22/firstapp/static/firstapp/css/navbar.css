@@ -19,23 +19,23 @@ span:hover {
 #check_drop {
     display:none;
     position:fixed; 
-    top:55px; left:430px; 
+    top:45px; left:420px; 
     background-color:white; 
     border:1px solid #757575; 
     color: #757575;
     font-weight:bold;
     text-align:center;
-    width:60px; height:70px;
+    width:60px; height:50px;
 }
 
 #login_drop {
     display:none;
     position:fixed; 
-    top:55px; right:255px; 
+    top:45px; right:245px; 
     background-color:white; 
     border:1px solid #757575; 
     color: #757575;
     font-weight:bold;
     text-align:center;
-    width:75px; height:70px;
+    width:75px; height:50px;
 }
