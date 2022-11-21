@@ -52,8 +52,8 @@
                 <input id="tab5" type="radio" name="tab"/>
                 <!--탭 제목-->
                 <label for="tab1">내 계정</label>
-                <label for="tab2">게시판 댓글</label>
-                <label for="tab3">게시판 게시물</label>
+                <label for="tab2">내 댓글</label>
+                <label for="tab3">내 게시물</label>
                 <label for="tab4">알림</label>
                 <label for="tab5">설정</label>
                 <!--탭 내용-->
@@ -68,15 +68,23 @@
                     <br><br>
                     <form>
                         표시 이름 * <br>
-                        <input type="text" size="30" value="">
+                        <div style="border: 1px solid black; width: 300px; padding: 7px; margin-top: 7px;">{{user.username}}</div>
+                        <input type="text" name="name">
                     </form>
                     <br><hr>
                     <br>
                     <h5>계정</h5>
                     <p>개인정보를 업데이트하세요.</p>
                     <a>로그인 이메일: {{ user.email }}</a><br>
-                    <a style="color: gray;">(로그인 이메일은 변경할 수 없습니다.)</a>
-
+                    <a style="color: gray;">(로그인 이메일은 변경할 수 없습니다.)</a><br><br>
+                    <a>
+                        이름<br>
+                        <div style="border: 1px solid black; width: 300px; padding: 7px; margin-top: 7px; margin-bottom: 7px;">{{user.username}}</div>
+                        이메일 *<br>
+                        <div style="border: 1px solid black; width: 300px; padding: 7px; margin-top: 7px; margin-bottom: 7px;">{{user.email}}</div>
+                        전화번호<br>
+                        <div style="border: 1px solid black; width: 300px; padding: 7px; margin-top: 7px; margin-bottom: 7px;">010-2594-5510</div>
+                    </a>
                     <br><br>
                     <a style="margin-left: 650px;">
                         <button style="background-color: transparent; border: 0; outline: 0;"><img src={% static "firstapp/image/btn_cancle.png" %} width="120px"></button>
@@ -87,16 +95,41 @@
                     
                 </div>
                 <div class="tab2_context">
-                    게시판 댓글입니다
+                    <h4>내 댓글</h4>
+                    <div style="text-align: center; border: 1px solid black; width: 800px; height: 200px; padding: 7px; margin-top: 15px; margin-bottom: 7px;">
+                        <a style="font-size: 15px; vertical-align: bottom;">아직 댓글이 없습니다.</a><br>
+                        <a style="font-size: 10px; vertical-align: bottom;">다음에 다시 확인해주세요.</a>
+                    </div>
                 </div>
                 <div class="tab3_context">
-                    게시판 게시물입니다
+                    <h4>내 게시물</h4>
+                    <div style="text-align: center; border: 1px solid black; width: 800px; height: 200px; padding: 7px; margin-top: 15px; margin-bottom: 7px;">
+                        <a style="font-size: 15px; vertical-align: bottom;">아직 게시글이 없습니다.</a><br>
+                        <a style="font-size: 10px; vertical-align: bottom;">다음에 다시 확인해주세요.</a>
+                    </div>
                 </div>
                 <div class="tab4_context">
-                    알림입니다
+                    <h4>알림</h4>
+                    <div style="text-align: center; border: 1px solid black; width: 800px; height: 200px; padding: 7px; margin-top: 15px; margin-bottom: 7px;">
+                        <a style="font-size: 15px; vertical-align: bottom;">알림이 없습니다!</a><br>
+                        <a style="font-size: 10px; vertical-align: bottom;">댓글 달기, 게시물 좋아요, 회원 팔로우 등의 활동을 시작하세요.</a>
+                    </div>
                 </div>
                 <div class="tab5_context">
-                    설정입니다
+                    <h4>알림 설정</h4>
+                    <p>수신할 알림을 선택하세요.</p><br><br>
+                    <a style="font-size: 18px;">이메일 알림</a>
+                    <br><br>
+                    <p>게시판</p>
+                    <a>'좋아요' 또는 반응</a>
+                    <a style="margin-left: 770px;"><img src={% static "firstapp/image/switchbutton.png" %} width="50px"></a>
+                    <hr>
+                    <a>댓글 또는 답글</a>
+                    <a style="margin-left: 793px;"><img src={% static "firstapp/image/switchbutton.png" %} width="50px"></a>
+                    <hr>
+                    <a>새 게시물</a>
+                    <a style="margin-left: 826px;"><img src={% static "firstapp/image/switchbutton.png" %} width="50px"></a>
+                    <hr>
                 </div>
             </div>
         </div>
