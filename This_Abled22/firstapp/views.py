@@ -139,3 +139,13 @@ def job_test_4(request):
         request,
         'firstapp/job_test_4.html'
     )
+def hobby_musical(request):
+    return render(
+        request,
+        'firstapp/hobby_musical.html'
+    )
+def hobby_musical_post1(request):
+    return render(
+        request,
+        'firstapp/hobby_musical_post1.html'
+    )
