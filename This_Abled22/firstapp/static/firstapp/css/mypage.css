@@ -21,10 +21,51 @@
 #bottom {
     margin: 0px 250px 0px 250px;
     padding: 20px;
+    font-size: 17px;
+    background-color: white;
 }
-.btnCon:target  {
-    background : #ccc;
+#css_tabs input:nth-of-type(1), #css_tabs input:nth-of-type(1)~div:nth-of-type(1),
+#css_tabs input:nth-of-type(2), #css_tabs input:nth-of-type(2)~div:nth-of-type(2),
+#css_tabs input:nth-of-type(3), #css_tabs input:nth-of-type(3)~div:nth-of-type(3),
+#css_tabs input:nth-of-type(4), #css_tabs input:nth-of-type(4)~div:nth-of-type(4),
+#css_tabs input:nth-of-type(5), #css_tabs input:nth-of-type(5)~div:nth-of-type(5){
+    display: none;
 }
-.btnCon:target .tabCon{
+#css_tabs input:nth-of-type(1):checked~div:nth-of-type(1),
+#css_tabs input:nth-of-type(2):checked~div:nth-of-type(2),
+#css_tabs input:nth-of-type(3):checked~div:nth-of-type(3),
+#css_tabs input:nth-of-type(4):checked~div:nth-of-type(4),
+#css_tabs input:nth-of-type(5):checked~div:nth-of-type(5){
     display: block;
+    padding-left: 30px;
+    padding-top: 50px;
+    font-size: 15px;
+}
+
+#css_tabs>label{
+    display: inline-block;
+    padding: 0px 15px 5px 15px;
+}
+#css_tabs>label:hover {
+    cursor:pointer;
+}
+#css_tabs input:nth-of-type(1):checked~label:nth-of-type(1), #css_tabs>label[for=tab1]:hover{
+    color: #F0C01A;
+}
+#css_tabs input:nth-of-type(2):checked~label:nth-of-type(2), #css_tabs>label[for=tab2]:hover{
+    color: #F0C01A;
+}
+#css_tabs input:nth-of-type(3):checked~label:nth-of-type(3), #css_tabs>label[for=tab3]:hover{
+    color: #F0C01A;
+}
+#css_tabs input:nth-of-type(4):checked~label:nth-of-type(4), #css_tabs>label[for=tab4]:hover{
+    color: #F0C01A;
+}
+#css_tabs input:nth-of-type(5):checked~label:nth-of-type(5), #css_tabs>label[for=tab5]:hover{
+    color: #F0C01A;
+}
+.button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
 }

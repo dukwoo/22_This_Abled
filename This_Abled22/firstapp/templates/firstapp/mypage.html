@@ -7,14 +7,14 @@
         <link rel="shortcut icon" type="text/css" href="{% static 'firstapp/image/icon_logo.png' %}">
 
         <!--style-->
-        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/mypage.css">
         <link rel="stylesheet" href="static/firstapp/css/navbar.css">
         <link rel="stylesheet" href="static/firstapp/css/footer.css">
-        <link rel="stylesheet" href="static/firstapp/css/mypage.css">
+        <link rel="stylesheet" href="static/firstapp/css/landing.css">
         <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
         
         <link href="{% static 'firstapp/css/mypage.css' %}" rel="stylesheet" type="text/css" media="screen">
-        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
         <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
 
         <!--javascript-->
@@ -34,11 +34,72 @@
                 <a><img src={% static "firstapp/image/camerabtn.png" %} width="40px"></a>
             </div>
             <div id="total_bottom">
-                <img class="rounded-circle" width="100px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
+                {% if user.socialaccount_set.all.0.get_avatar_url %}
+                    <img class="rounded-circle" width="100px" src="{{user.socialaccount_set.all.0.get_avatar_url}}">
+                {% else %}
+                    <img class="rounded-circle" width="100px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
+                {% endif %}
                 <span id="total_text">{{ user.username }}</span>
             </div>
         </div>
-        
+        <div id="bottom" script="location.href = "#tab1"">
+            <div id="css_tabs">
+                <!--라디오 버튼-->
+                <input id="tab1" type="radio" name="tab" checked="checked"/>
+                <input id="tab2" type="radio" name="tab"/>
+                <input id="tab3" type="radio" name="tab"/>
+                <input id="tab4" type="radio" name="tab"/>
+                <input id="tab5" type="radio" name="tab"/>
+                <!--탭 제목-->
+                <label for="tab1">내 계정</label>
+                <label for="tab2">게시판 댓글</label>
+                <label for="tab3">게시판 게시물</label>
+                <label for="tab4">알림</label>
+                <label for="tab5">설정</label>
+                <!--탭 내용-->
+                <div class="tab1_context">
+                    <h4>내 계정</h4>
+                    <a>아래에서 개인 정보를 확인 및 편집하세요.</a>
+                    <br><br>
+                    <hr>
+                    <br>
+                    <h5>표시 정보</h5>
+                    <a>프로필 카드는 모든 사이트 회원에게 공개됩니다.</a>
+                    <br><br>
+                    <form>
+                        표시 이름 * <br>
+                        <input type="text" size="30" value="">
+                    </form>
+                    <br><hr>
+                    <br>
+                    <h5>계정</h5>
+                    <p>개인정보를 업데이트하세요.</p>
+                    <a>로그인 이메일: {{ user.email }}</a><br>
+                    <a style="color: gray;">(로그인 이메일은 변경할 수 없습니다.)</a>
+
+                    <br><br>
+                    <a style="margin-left: 650px;">
+                        <button style="background-color: transparent; border: 0; outline: 0;"><img src={% static "firstapp/image/btn_cancle.png" %} width="120px"></button>
+                        <button style="background-color: transparent; border: 0; outline: 0;"><img src={% static "firstapp/image/btn_update.png" %} width="120px"></button>
+                    </a>
+                    <br><br>
+                    <a href="/accounts/logout/">Log Out</a>
+                    
+                </div>
+                <div class="tab2_context">
+                    게시판 댓글입니다
+                </div>
+                <div class="tab3_context">
+                    게시판 게시물입니다
+                </div>
+                <div class="tab4_context">
+                    알림입니다
+                </div>
+                <div class="tab5_context">
+                    설정입니다
+                </div>
+            </div>
+        </div>
         
 
 

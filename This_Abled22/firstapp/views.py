@@ -107,12 +107,18 @@ def mypage(request):
         request,
         'firstapp/mypage.html'
     )
+
 def start_hobby_test(request):
-    return render(
+        return render(
         request,
         'firstapp/start_hobby_test.html'
     )
-
+    
+def loginpage(request):
+    return render(
+        request,
+        'firstapp/loginpage.html'
+    )
 def hobby_test_result(request):
     return render(
         request,

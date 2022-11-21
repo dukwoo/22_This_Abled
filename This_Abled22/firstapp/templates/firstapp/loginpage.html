@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load socialaccount %}
+{% load static %}
+<html>
+    <head>
+        <!--title & logo-->
+        <title>This_Abled</title>
+        <link rel="shortcut icon" type="text/css" href="{% static 'firstapp/image/icon_logo.png' %}">
+
+        <!--style-->
+        <link rel="stylesheet" href="static/firstapp/css/mypage.css">
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link rel="stylesheet" href="static/firstapp/css/landing.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href="{% static 'firstapp/css/mypage.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+        <!--javascript-->
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+
+        <!--main-->
+        <div class="modal-body">
+            <div style="text-align: center;">
+                <br><br>
+                <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}">
+                    <i class="fab fa-google"></i>&nbsp;&nbsp;Log in with Google</a><br>
+                <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/login/">
+                    <i class="far fa-envelope"></i>&nbsp;&nbsp;Log in with E-mail</a><br>
+                <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/signup/">
+                    <i class="far fa-envelope"></i>&nbsp;&nbsp;Sign Up with E-mail</a><br><br>
+            </div>
+        </div>
+        
+
+
+        <!--footer-->
+        {% include 'firstapp/footer.html' %}
+
+
+        <!--javascript-->
+    </body>
+</html>
