@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>취미-뮤지컬/연극/영화 감상 커뮤니티</title>
+        
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+
+        <!--main-->
+        {% include 'firstapp/community_bar.html' %}
+        <!--header-->
+        <header class="py-2 border-bottom mb-4" style="background-image: url({% static "firstapp/image/취미_뮤지컬_bg.jpg" %});">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder" style="color:#ffffff">뮤지컬/연극/영화 감상</h1>
+                    <p class="lead mb-0" style="font-size:20px;color:#ffffff;padding-top:10px;">취미 테스트 결과 "뮤지컬/연극/영화 감상"에 관하여 소통하는 게시판입니다!</p>
+                    <p class="lead mb-0" style="font-size:20px;color:#ffffff">자유롭게 글과 댓글을 작성해주세요.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content-->
+        <div>
+            <div class="row" style="width:100%; padding-bottom: 50px; padding-left:5em">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8">
+                    <div style="border: 1px solid #3c096c; border-radius: 0.5em;">
+                        <table>
+                            <tr>
+                                <td style="font-weight:bold; color: #3c096c; padding-left: 20px; padding-top: 20px">
+                                    뮤지컬/연극/영화 감상
+                                </td>
+                            <tr>
+                        </table>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td style="padding-bottom: 20px; padding-left: 20px;">
+                                    <a href="/hobby_musical_post1/" style="text-decoration: none; color:#000000">
+                                        뮤지컬 좋아하시는 분 계신가요?
+                                    </a>
+                                </td>
+                                <td style="padding-bottom: 20px; padding-left:10px;font-size:12px;color:darkgray">
+                                    Novemver, 14, 2022
+                                </td>
+                            <tr>
+                        </table>
+                    </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        
+        {% include 'firstapp/footer.html' %}
+        
+        
+        <!--javascript-->
+        <script src={% static "firstapp/javascript/landing.js" %}></script>
+    </body>
+</html>
