@@ -27,7 +27,12 @@ span:hover {
     text-align:center;
     width:60px; height:50px;
 }
-
+#check_drop:hover{
+    color:#3c096c;
+}
+a:hover{
+    color:#3c096c;
+}
 #login_drop {
     display:none;
     position:fixed; 
