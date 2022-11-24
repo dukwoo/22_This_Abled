@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>일자리 테스트</title>
+        <link href="{% static 'firstapp/css/test.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/navbar.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/footer.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static 'firstapp/css/community_list.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="text/css" href="{% static 'firstapp/image/icon_logo.png' %}">
+
+        <!--style-->
+        <!--<link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="static/firstapp/css/landing.css"> 
+        <link rel="stylesheet" href="static/firstapp/css/navbar.css">
+        <link rel="stylesheet" href="static/firstapp/css/footer.css">
+        <link href="{% static 'firstapp/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+        
+        <link href=".bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="static/firstapp/css/landing.css">-->
+        <!--javascript-->
+        <script src="https://kit.fontawesome.com/6149eb66f9.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!--navbar-->
+        {% include 'firstapp/navbar.html' %}
+        <img src="{% static 'firstapp/image/hobby_test_top.png' %}" width="100%">
+        <div class="next" style="padding-top: 10px;">
+            
+            <a id="nextbtn" href="/job_test_1/" class="btn rounded-pill" style="width: 70px; height:30px; font-size:15px; padding: 3px;">
+                4/4
+            </a>
+        </div>
+        <table class="q_table">
+            <tr>
+                <td>
+                    <!--첫번째 질문-->
+                    <div >Q. 주변에서 운동신경 있다는 말을 종종 듣는다.</div>
+                    <fieldset>
+                        <label>
+                          <input type="radio" name="q1" value="email" />
+                          <span>매우 그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q1" value="phone" />
+                          <span>그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q1" value="fax" />
+                          <span>아니다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q1" value="mail" />
+                          <span>매우 아니다</span>
+                        </label>
+                      </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--두 번째 질문-->
+                    Q. 내가 알고 있는 것을 다른 사람에게 가르치는 것이 즐겁다.</div>
+                    <fieldset>
+                        <label>
+                          <input type="radio" name="q2" value="email"/>
+                          <span>매우 그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q2" value="phone" />
+                          <span>그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q2" value="fax" />
+                          <span>아니다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q2" value="mail" />
+                          <span>매우 아니다</span>
+                        </label>
+                      </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--세 번째 질문-->
+                    Q. 특정 음식을 만들기 위해 필요한 재료들이나 레시피를 잘 외우는 편이다.</div>
+                    <fieldset>
+                        <label>
+                          <input type="radio" name="q3" value="email"/>
+                          <span>매우 그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q3" value="phone" />
+                          <span>그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q3" value="fax" />
+                          <span>아니다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q3" value="mail" />
+                          <span>매우 아니다</span>
+                        </label>
+                      </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--네 번째 질문-->
+                    <div >Q. 어르신들과 대화하는 것을 좋아하는 편이다.</div>
+                    <fieldset>
+                        <label>
+                          <input type="radio" name="q4" value="email" />
+                          <span>매우 그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q4" value="phone" />
+                          <span>그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q4" value="fax" />
+                          <span>아니다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q4" value="mail" />
+                          <span>매우 아니다</span>
+                        </label>
+                      </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 40px;">
+                    <!--다섯 번째 질문-->
+                    <div>Q. 예술적으로 감각이 뛰어 난다는 소리를 많이 듣는 편이다.</div>
+                    <fieldset>
+                        <label>
+                          <input type="radio" name="q5" value="email"/>
+                          <span>매우 그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q5" value="phone" />
+                          <span>그렇다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q5" value="fax" />
+                          <span>아니다</span>
+                        </label>
+                      
+                        <label style="padding-left: 52px; padding-top: 10px;">
+                          <input type="radio" name="q5" value="mail" />
+                          <span>매우 아니다</span>
+                        </label>
+                      </fieldset>
+                </td>
+            </tr>
+        </table>
+        
+
+        
+<div class="next" style="padding-top: 30px;">
+            
+            <a id="nextbtn" href="/hobby_test_result/" class="btn rounded-pill" style="width: 110px; height:45px; font-size:17px; padding-top: 8px;">
+                다음
+            </a>
+        </div>
+
+
+
+        {% include 'firstapp/footer.html' %}
+        
+    </body>
+</html>

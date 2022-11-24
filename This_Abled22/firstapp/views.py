@@ -149,3 +149,27 @@ def hobby_musical_post1(request):
         request,
         'firstapp/hobby_musical_post1.html'
     )
+
+def hobby_test_1(request):
+    return render(
+        request,
+        'firstapp/hobby_test_1.html'
+    )
+
+def hobby_test_2(request):
+    return render(
+        request,
+        'firstapp/hobby_test_2.html'
+    )
+
+def hobby_test_3(request):
+    return render(
+        request,
+        'firstapp/hobby_test_3.html'
+    )
+
+def hobby_test_4(request):
+    return render(
+        request,
+        'firstapp/hobby_test_4.html'
+    )

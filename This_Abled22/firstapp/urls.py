@@ -28,4 +28,8 @@ urlpatterns = [
     path('loginpage/', views.loginpage),
     path('hobby_musical/', views.hobby_musical),
     path('hobby_musical_post1/', views.hobby_musical_post1),
+    path('hobby_test_1/', views.hobby_test_1),
+    path('hobby_test_2/', views.hobby_test_2),
+    path('hobby_test_3/', views.hobby_test_3),
+    path('hobby_test_4/', views.hobby_test_4),
 ]

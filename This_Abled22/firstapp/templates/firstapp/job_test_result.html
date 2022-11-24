@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>일자리 테스트 결과 페이지</title>
+
         <link href="{% static 'firstapp/css/job_test_result.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/test.css' %}" rel="stylesheet" type="text/css" media="screen">
         <link href="{% static 'firstapp/css/landing.css' %}" rel="stylesheet" type="text/css" media="screen">
@@ -60,8 +61,32 @@
             </tr>
             <tr>
                 <td class="t">
-                    <img src="{% static 'firstapp/image/job_test_result.png' %}" width="50%" style="margin-bottom: 50px;">
-                </td>
+                    <div id="staticMap" style="width:600px;height:350px;"></div>    
+
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=47282b4127afbbe7e842ae13c6675ed4"></script>
+        <script>    
+            // 이미지 지도에 표시할 마커입니다
+            // 이미지 지도에 표시할 마커를 아래와 같이 배열로 넣어주면 여러개의 마커를 표시할 수 있습니다 
+            var markers = [
+                {
+                    position: new kakao.maps.LatLng(33.450701, 126.570667)
+                },
+                {
+                    position: new kakao.maps.LatLng(33.450001, 126.570467), 
+                    text: '텍스트를 표시할 수 있어요!' // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
+                }
+            ];
+            
+            var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지도를 표시할 div  
+                staticMapOption = { 
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 이미지 지도의 중심좌표
+                    level: 3, // 이미지 지도의 확대 레벨
+                    marker: markers // 이미지 지도에 표시할 마커 
+                };    
+            
+            // 이미지 지도를 생성합니다
+            var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+            </script>             </td>
             </tr>
         </table>
         {% include 'firstapp/footer.html' %}
@@ -70,4 +95,3 @@
         <script src={% static "firstapp/javascript/navbar.js" %}></script>
     </body>
 </html>
-Footer
