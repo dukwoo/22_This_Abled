@@ -1,7 +1,7 @@
 <!--navbar-->
 {% load socialaccount %}
 {% load static %}
-<div>
+<nav>
     <table id="nav">
         <tr>
             <td width="400px">
@@ -9,80 +9,63 @@
                     <img src="{% static 'firstapp/image/logo.png' %}" width="150px" height="45px">
                 </a>
             </td>
-            <td width="70px" id="check_func"> 
-                <span id="check" onclick="javascript:check()" style="text-decoration:none; color: #3c096c;">
-                    검사
-                </span>
-                <!--<a href="/start_job_test/" style="text-decoration:none; color: #3c096c;">검사</a>-->
+            <td width="70px" id="check_func" style="padding-left:20px;"> 
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" href="#" id="check" style="color: #3c096c;" role="button" data-toggle="dropdown" aria-haspopup="ture" aria-expanded="false">
+                            검사
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <span>
+                                <a href="/start_job_test/" style="font-size: 16px; text-decoration:none; color: #3c096c;">
+                                    일자리
+                                </a>
+                            </span>
+                            <br>
+                            <span>
+                                <a href="/start_hobby_test/" style="font-size: 16px; text-decoration:none; color: #3c096c;">
+                                    취미
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
             </td>
-            <td width="110px" id="com_func">
+            <td width="100px" id="com_func">
                 <span id="com">
-                    <a href="/community_list/" style="text-decoration:none; color: #757575;">
+                    <a href="/community_list/" style="text-decoration:none; color: #3c096c;">
                         커뮤니티
                     </a>
                 </span>    
             </td>
 
-            <!--
             <td id="login_func">
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/mypage/" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="ture" aria-expanded="false">
-                            {% if user.socialaccount_set.all.0.get_avatar_url %}
-                            <img class="rounded-circle" width="25px" src="{{user.socialaccount_set.all.0.get_avatar_url}}">
-                            {% else %}
-                            <img class="rounded-circle" width="25px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
-                            {% endif %}
-                            {{ user.username }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/accounts/logout/">Log Out</a>
-                        </div>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" style="color: #3c096c;" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="ture" aria-expanded="false">
+                                {% if user.socialaccount_set.all.0.get_avatar_url %}
+                                <img class="rounded-circle" width="25px" src="{{user.socialaccount_set.all.0.get_avatar_url}}">
+                                {% else %}
+                                <img class="rounded-circle" width="25px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
+                                {% endif %}
+                                {{ user.username }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <span><a href="/mypage/" style="font-size: 16px; text-decoration:none; color: #3c096c;">My Page</a></span>
+                                <br>
+                                <span><a href="/accounts/logout/" style="font-size: 16px; text-decoration:none; color: #3c096c;">Log Out</a></span>
+                            </div>
+                        </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a role="button" data-toggle="modal" data-target="#loginModal">
-                            Log In
-                        </a>
-                    </li>
+                        <div id="me" class="nav-item">
+                            <a href="/loginpage/" style="text-decoration:none; color: #757575;">
+                                Log In
+                            </a>
+                        </div>
                     {% endif %}
                 </ul>
-            </td>
-            -->
-
-            <td id="login_func">
-                    {% if user.is_authenticated %}
-                    <div id="me">
-                            {% if user.socialaccount_set.all.0.get_avatar_url %}
-                            <img class="rounded-circle" width="25px" src="{{user.socialaccount_set.all.0.get_avatar_url}}">
-                            {% else %}
-                            <img class="rounded-circle" width="25px" src="https://doitdjango.com/avatar/id/381/9674d4ef12eea4a4/svg/{{user.email}}/">
-                            {% endif %}
-                            {{ user.username }}
-                    </div>
-                    {% else %}
-                    <div id="me2">
-                        <a href="/loginpage/">Log In</a>
-                    </div>
-                    {% endif %}
-            </td>
-
+            </td>  
         </tr>    
     </table>
-
-    <!--dropdown(check)-->
-    <div id="check_drop">
-        <span><a href="/start_job_test/" style="text-decoration:none; color:#757575;">일자리</a></span>
-        <br>
-        <a href="/start_hobby_test/" style="text-decoration:none; color:#757575;">취미</a>
-    </div>
-
-    <!--dropdown(login)-->
-    <div id="login_drop">
-        <span><a href="/mypage/">My Page</a></span>
-        <br>
-        <span><a href="/accounts/logout/">Log Out</a></span>
-    </div>
-
-</div>
+</nav>

@@ -41,25 +41,25 @@
             <tr>
                 <td>
                     <!--첫번째 질문-->
-                    <div >Q. 무거운 물건들을 나를 때 쉽게 하는 편이다.</div>
+                    <div onclick="speak('무거운 물건들을 나를 때 쉽게 하는 편이다.')">Q. 무거운 물건들을 나를 때 쉽게 하는 편이다.</div>
                     <fieldset>
                         <label>
-                          <input type="radio" name="q1" value="email" />
+                          <input type="radio" name="Q1" value="email" onclick="speak('매우 그렇다')">
                           <span>매우 그렇다</span>
                         </label>
                       
                         <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q1" value="phone" />
+                          <input type="radio" name="Q1" value="phone" class="q1" onclick="speak('그렇다')">
                           <span>그렇다</span>
                         </label>
                       
                         <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q1" value="fax" />
+                          <input type="radio" name="Q1" value="fax" class="q1" onclick="speak('아니다')"/>
                           <span>아니다</span>
                         </label>
                       
                         <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q1" value="mail" />
+                          <input type="radio" name="Q1" value="mail" class="q1" onclick="speak('매우 아니다')"/>
                           <span>매우 아니다</span>
                         </label>
                       </fieldset>
@@ -68,118 +68,174 @@
             <tr>
                 <td style="padding-top: 40px;">
                     <!--두 번째 질문-->
-                    Q. 새로운 전자기기를 잘 다루는 편이다.</div>
+                    <div onclick="speak('새로운 전자기기를 잘 다루는 편이다.')" style="display: inline;">Q. 새로운 전자기기를 잘 다루는 편이다.</div>
                     <fieldset>
-                        <label>
-                          <input type="radio" name="q2" value="email"/>
-                          <span>매우 그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q2" value="phone" />
-                          <span>그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q2" value="fax" />
-                          <span>아니다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q2" value="mail" />
-                          <span>매우 아니다</span>
-                        </label>
-                      </fieldset>
+                      <label>
+                        <input type="radio" name="Q2" value="email" onclick="speak('매우 그렇다')">
+                        <span>매우 그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q2" value="phone" class="q1" onclick="speak('그렇다')">
+                        <span>그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q2" value="fax" class="q1" onclick="speak('아니다')"/>
+                        <span>아니다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q2" value="mail" class="q1" onclick="speak('매우 아니다')"/>
+                        <span>매우 아니다</span>
+                      </label>
+                    </fieldset>
                 </td>
             </tr>
             <tr>
                 <td style="padding-top: 40px;">
                     <!--세 번째 질문-->
-                    Q. 손으로 정교한 작업을 하는 것이 재미있다.</div>
+                    <div onclick="speak('손으로 정교한 작업을 하는 것이 재미있다.')">Q. 손으로 정교한 작업을 하는 것이 재미있다.</div>
                     <fieldset>
-                        <label>
-                          <input type="radio" name="q3" value="email"/>
-                          <span>매우 그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q3" value="phone" />
-                          <span>그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q3" value="fax" />
-                          <span>아니다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q3" value="mail" />
-                          <span>매우 아니다</span>
-                        </label>
+                      <label>
+                        <input type="radio" name="Q3" value="email" onclick="speak('매우 그렇다')">
+                        <span>매우 그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q3" value="phone" class="q1" onclick="speak('그렇다')">
+                        <span>그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q3" value="fax" class="q1" onclick="speak('아니다')"/>
+                        <span>아니다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q3" value="mail" class="q1" onclick="speak('매우 아니다')"/>
+                        <span>매우 아니다</span>
+                      </label>
                       </fieldset>
                 </td>
             </tr>
             <tr>
                 <td style="padding-top: 40px;">
                     <!--네 번째 질문-->
-                    <div >Q. 침착하고 원만한 성격을 가지고 있다.</div>
+                    <div onclick="speak('침착하고 원만한 성격을 가지고 있다.')">Q. 침착하고 원만한 성격을 가지고 있다.</div>
                     <fieldset>
-                        <label>
-                          <input type="radio" name="q4" value="email" />
-                          <span>매우 그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q4" value="phone" />
-                          <span>그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q4" value="fax" />
-                          <span>아니다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q4" value="mail" />
-                          <span>매우 아니다</span>
-                        </label>
+                      <label>
+                        <input type="radio" name="Q1" value="email" onclick="speak('매우 그렇다')">
+                        <span>매우 그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q4" value="phone" class="q1" onclick="speak('그렇다')">
+                        <span>그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q4" value="fax" class="q1" onclick="speak('아니다')"/>
+                        <span>아니다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q4" value="mail" class="q1" onclick="speak('매우 아니다')"/>
+                        <span>매우 아니다</span>
+                      </label>
                       </fieldset>
                 </td>
             </tr>
             <tr>
                 <td style="padding-top: 40px;">
                     <!--다섯 번째 질문-->
-                    <div>Q. 평소에 무언가를 만들 때 손재주가 있다고 듣거나 빠르게 끝내는 편이다.</div>
+                    <div onclick="speak('사람을 상대하고 의사소통 하는 일을 잘 하는 편이다.')">Q. 사람을 상대하고 의사소통 하는 일을 잘 하는 편이다.</div>
                     <fieldset>
-                        <label>
-                          <input type="radio" name="q5" value="email"/>
-                          <span>매우 그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q5" value="phone" />
-                          <span>그렇다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q5" value="fax" />
-                          <span>아니다</span>
-                        </label>
-                      
-                        <label style="padding-left: 52px; padding-top: 10px;">
-                          <input type="radio" name="q5" value="mail" />
-                          <span>매우 아니다</span>
-                        </label>
+                      <label>
+                        <input type="radio" name="Q5" value="email" onclick="speak('매우 그렇다')">
+                        <span>매우 그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q5" value="phone" class="q1" onclick="speak('그렇다')">
+                        <span>그렇다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q5" value="fax" class="q1" onclick="speak('아니다')"/>
+                        <span>아니다</span>
+                      </label>
+                    
+                      <label style="padding-left: 52px; padding-top: 10px;">
+                        <input type="radio" name="Q5" value="mail" class="q1" onclick="speak('매우 아니다')"/>
+                        <span>매우 아니다</span>
+                      </label>
                       </fieldset>
                 </td>
             </tr>
         </table>
+        <!-- <select id="select-lang">
+          <option value="ko-KR">한국어</option>
+          <option value="ja-JP" selected>일본어</option>
+          <option value="en-US">영어</option>
+      </select>
+      <textarea id="text" rows="5" cols="20"></textarea>
+      <button id="btn-read">읽기</button> -->
+      <script>
+          function speak(text) {
+              if (typeof SpeechSynthesisUtterance === "undefined" || typeof window.speechSynthesis === "undefined") {
+                  alert("이 브라우저는 음성 합성을 지원하지 않습니다.")
+                  return
+              }
+              window.speechSynthesis.cancel() // 현재 읽고있다면 초기화
+  
+              const prop = {
+                rate: 0.9,
+                pitch: 0.8,
+                lang: "ko-KR"
+            } || {}
+  
+              const speechMsg = new SpeechSynthesisUtterance()
+              speechMsg.rate = prop.rate || 0.9 // 속도: 0.1 ~ 10      
+            speechMsg.pitch = prop.pitch || 0.8 // 음높이: 0 ~ 2
+            speechMsg.lang = prop.lang || "ko-KR"
+              speechMsg.text = text
+              
+              // SpeechSynthesisUtterance에 저장된 내용을 바탕으로 음성합성 실행
+              window.speechSynthesis.speak(speechMsg)
+          }
+  
+          // 이벤트 영역
+          const selectLang = document.getElementById("select-lang")
+          const text = document.getElementsByClassName('q1')
+
+          let elements = document.getElementsByClassName('q1');  
+          // elements[0].addEventListener("click", e => {
+          //     alert(elements[0].value)
+          //     speak(elements[i].value, {
+          //         rate: 1,
+          //         pitch: 0.9,
+          //         lang: "ko-KR"
+          //     })
+          // })
+          // elements[1].addEventListener("click", e => {
+          //     alert(elements[1].value)
+          //     speak(elements[i].value, {
+          //         rate: 1,
+          //         pitch: 0.9,
+          //         lang: "ko-KR"
+          //     })
+          // })
+          
+          
+          
+      </script>
         
 
         
 <div class="next" style="padding-top: 30px;">
             
-            <a id="nextbtn" href="/job_test_result/" class="btn rounded-pill" style="width: 110px; height:45px; font-size:17px; padding-top: 8px;">
+            <a id="nextbtn" href="/job_test_result/" class="btn rounded-pill" style="width: 110px; height:45px; font-size:17px; padding-top: 8px;" onclick="speak(this.innerHTML)">
                 제출
             </a>
         </div>
@@ -188,5 +244,10 @@
 
         {% include 'firstapp/footer.html' %}
         
+        <!--javascript-->
+        <script src={% static "firstapp/javascript/navbar.js" %}></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     </body>
 </html>
