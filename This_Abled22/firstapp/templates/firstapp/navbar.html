@@ -11,7 +11,7 @@
             </td>
             <td width="70px" id="check_func"> 
                 <span id="check" onclick="javascript:check()">
-                    검사
+                        검사
                 </span>
                 <!--<a href="/start_job_test/" style="text-decoration:none; color: #3c096c;">검사</a>-->
             </td>
@@ -50,12 +50,33 @@
                 </ul>
             </td>
             -->
+<!--
+        <td id="login_func">
+            <ul class="navbar-nav ms-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        {{ user.username }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/accounts/logout/">Log Out</a></li>
+                    </ul>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </td>
+    -->
 
             <td id="login_func">
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/mypage/" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="ture" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="ture" aria-expanded="false">
                             {% if user.socialaccount_set.all.0.get_avatar_url %}
                             <img class="rounded-circle" width="25px" src="{{user.socialaccount_set.all.0.get_avatar_url}}">
                             {% else %}
@@ -69,23 +90,33 @@
                     </li>
                     {% else %}
                     <li id="me" class="nav-item">
-                        Log In
+                        
+                            Log In
+                        
                     </li>
                     {% endif %}
                 </ul>
             </td>
-
+        
         </tr>    
     </table>
 
     <!--dropdown(check)-->
     <div id="check_drop">
-        <span>일자리</span>
+        <span>
+            <a href="/start_job_test/" style="text-decoration:none; color: #3c096c;">
+                일자리
+            </a>
+        </span>
         <br>
-        <span>취미</span>
+        <span>
+            <a href="/start_hobby_test/" style="text-decoration:none; color: #3c096c;">
+                취미
+            </a>
+        </span>
     </div>
 
-    <!--dropdown(login)-->
+    <!--dropdown(login 되어있을 때)-->
     <div id="login_drop">
         <span>내 계정</span>
         <br>

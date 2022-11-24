@@ -85,48 +85,11 @@
                 </div>
             </div>
         </div>
-          
+
         <!--footer-->
         {% include 'firstapp/footer.html' %}
-
-        <script>
-            //landing.js 내용
-            var ch = document.getElementById("check");
-            var me = document.getElementById("me");
-
-            var cd = document.getElementById("check_drop");
-            var ld = document.getElementById("login_drop");
-
-            var ch_num = 0; var me_num = 0; 
-            
-            function check() {
-                ch_num += 1;
-
-                ch.style.color = "#3c096c";
-                me.style.color = "#757575";
-
-                if (ch_num%2!=0) { //홀수
-                    cd.style.display = "block";
-                }
-                else {
-                    cd.style.display = "none";
-                }
-            }
-
-            me.addEventListener('click', () => {
-                me_num += 1;
-                
-                ch.style.color = "#757575";
-                me.style.color = "#3c096c"
-
-                if (me_num%2!=0) { //홀수
-                    ld.style.display = "block";
-                }
-                else {
-                    ld.style.display = "none";
-                }
-            })
-        </script>
-
+        
+        <!--javascript-->
+        <script src={% static "firstapp/javascript/navbar.js" %}></script>
     </body>
 </html>
