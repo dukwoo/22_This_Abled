@@ -14,3 +14,7 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'This_Abled22.settings')
 
 application = get_wsgi_application()
+# wsgi.py
+...
+from whitenoise.django import DjangoWhiteNoise
+application = DjangoWhiteNoise(application)
