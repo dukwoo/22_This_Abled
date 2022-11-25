@@ -50,7 +50,7 @@ label {
     border: none;
     margin: 0;
   } */
-  .q_table
+  .q_table, span
   {display: flex;
     justify-content: center;
     border: none;
@@ -61,7 +61,7 @@ label {
     {
         padding-bottom: 15px;
         text-align: center;
-    }
+    } 
     #nextbtn
     {
         border-color: #3c096c;

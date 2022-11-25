@@ -34,12 +34,12 @@
         <table class="resultT">
             <tr>
                 <td class="t">
-                    <div class="title">취미 테스트 결과</div>
+                    <div class="title" onclick="speak('취미 테스트 결과')">취미 테스트 결과</div>
                 </td>
             </tr>
             <tr>
                 <td class="t">
-                    <div class="content">나의 적성에 딱 맞는 취미는<br>
+                    <div class="content" onclick="speak('나의 적성에 딱 맞는 취미는 뮤지컬/연극/영화 감상입니다.')">나의 적성에 딱 맞는 취미는<br>
                         <span class="field">뮤지컬/연극/영화 감상</span>&nbsp;입니다
                     </div>
                 </td>
@@ -47,7 +47,7 @@
             <tr>
                 <td class="t">
                     <button id="btn_hobby_result" style="width: 10em; height:2.5em; border-radius:0.5em;">
-                        <a href="/hobby_musical/" style="text-decoration:none; color: #fff">
+                        <a href="/hobby_musical/" style="text-decoration:none; color: #fff" onclick="speak('커뮤니티 바로가기')">
                             커뮤니티 바로가기
                         </a>
                     </button>
@@ -85,6 +85,55 @@
                 더보기
             </a>
         </div>
+        <script>
+            function speak(text) {
+                if (typeof SpeechSynthesisUtterance === "undefined" || typeof window.speechSynthesis === "undefined") {
+                    alert("이 브라우저는 음성 합성을 지원하지 않습니다.")
+                    return
+                }
+                window.speechSynthesis.cancel() // 현재 읽고있다면 초기화
+    
+                const prop = {
+                  rate: 0.9,
+                  pitch: 0.8,
+                  lang: "ko-KR"
+              } || {}
+    
+                const speechMsg = new SpeechSynthesisUtterance()
+                speechMsg.rate = prop.rate || 0.9 // 속도: 0.1 ~ 10      
+              speechMsg.pitch = prop.pitch || 0.8 // 음높이: 0 ~ 2
+              speechMsg.lang = prop.lang || "ko-KR"
+                speechMsg.text = text
+                
+                // SpeechSynthesisUtterance에 저장된 내용을 바탕으로 음성합성 실행
+                window.speechSynthesis.speak(speechMsg)
+            }
+    
+            // 이벤트 영역
+            const selectLang = document.getElementById("select-lang")
+            const text = document.getElementsByClassName('q1')
+  
+            let elements = document.getElementsByClassName('q1');  
+            // elements[0].addEventListener("click", e => {
+            //     alert(elements[0].value)
+            //     speak(elements[i].value, {
+            //         rate: 1,
+            //         pitch: 0.9,
+            //         lang: "ko-KR"
+            //     })
+            // })
+            // elements[1].addEventListener("click", e => {
+            //     alert(elements[1].value)
+            //     speak(elements[i].value, {
+            //         rate: 1,
+            //         pitch: 0.9,
+            //         lang: "ko-KR"
+            //     })
+            // })
+            
+            
+            
+        </script>
 
 
 

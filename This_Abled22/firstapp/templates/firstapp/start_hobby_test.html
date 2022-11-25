@@ -48,7 +48,7 @@
                                     <p id="t_hobby" class="card-text">
                                         나에게 맞는 취미를 추천 받아보세요!
                                     </p>
-                                    <a id="c_hobby" href="/hobby_test_1/" class="btn btn-primary rounded-pill">
+                                    <a id="c_hobby" href="/hobby_test_1/" class="btn btn-primary rounded-pill" onclick="speak('시작하기')">
                                         시작하기 &nbsp; <i class="fas fa-arrow-right"></i>
                                     </a>
                                 </div>
@@ -59,7 +59,56 @@
                 
                     </div>
                 </div>
-
+                <script>
+                    function speak(text) {
+                        if (typeof SpeechSynthesisUtterance === "undefined" || typeof window.speechSynthesis === "undefined") {
+                            alert("이 브라우저는 음성 합성을 지원하지 않습니다.")
+                            return
+                        }
+                        window.speechSynthesis.cancel() // 현재 읽고있다면 초기화
+            
+                        const prop = {
+                          rate: 0.9,
+                          pitch: 0.8,
+                          lang: "ko-KR"
+                      } || {}
+            
+                        const speechMsg = new SpeechSynthesisUtterance()
+                        speechMsg.rate = prop.rate || 0.9 // 속도: 0.1 ~ 10      
+                      speechMsg.pitch = prop.pitch || 0.8 // 음높이: 0 ~ 2
+                      speechMsg.lang = prop.lang || "ko-KR"
+                        speechMsg.text = text
+                        
+                        // SpeechSynthesisUtterance에 저장된 내용을 바탕으로 음성합성 실행
+                        window.speechSynthesis.speak(speechMsg)
+                    }
+            
+                    // 이벤트 영역
+                    const selectLang = document.getElementById("select-lang")
+                    const text = document.getElementsByClassName('q1')
+            
+                    let elements = document.getElementsByClassName('q1');  
+                    // elements[0].addEventListener("click", e => {
+                    //     alert(elements[0].value)
+                    //     speak(elements[i].value, {
+                    //         rate: 1,
+                    //         pitch: 0.9,
+                    //         lang: "ko-KR"
+                    //     })
+                    // })
+                    // elements[1].addEventListener("click", e => {
+                    //     alert(elements[1].value)
+                    //     speak(elements[i].value, {
+                    //         rate: 1,
+                    //         pitch: 0.9,
+                    //         lang: "ko-KR"
+                    //     })
+                    // })
+                    
+                    
+                    
+                </script>
+            
                 {% include 'firstapp/footer.html' %}
 
                 <!--javascript-->
