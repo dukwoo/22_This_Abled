@@ -1,1 +1,0 @@
-web: gunicorn This_Abled22.wsgi --log-file -
