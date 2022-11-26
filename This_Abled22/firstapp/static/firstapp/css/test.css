@@ -50,8 +50,9 @@ label {
     border: none;
     margin: 0;
   } */
-  .q_table, span
+  .q_table
   {display: flex;
+    /* width: 400px; */
     justify-content: center;
     border: none;
     /* padding: 40px 20px; */
