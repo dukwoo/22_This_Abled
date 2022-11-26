@@ -46,8 +46,13 @@
                 </td>
             </tr>
             <tr>
+                <td class="t" style="padding-bottom: 20px;"> 
+                    <img src="{% static 'firstapp/image/food_making.png' %}" width="40%"">
+                </td>
+            </tr>
+            <tr>
                 <td class="t">
-                    <div class="last" onclick="speak('내 주변에 있는 추천 일자리를 알아봐요!')">내 주변에 있는 추천 일자리를 알아봐요!</div>
+                    <div class="last" onclick="speak('내 주변에 있는 추천 일자리를 알아봐요!')" style="font-size:15.5px;">내 주변에 있는 추천 일자리를 알아봐요!</div>
                 </td>
             </tr>
             <tr>
@@ -59,9 +64,13 @@
                     </button>
                 </td>
             </tr>
+
             <tr>
-                <td class="t" style="padding-bottom: 120px; padding-top:50px;">
+                <td class="t" style="padding-bottom: 50px; padding-top: 30px;">
                     <div id="staticMap" style="width:600px;height:350px;"></div>
+                </td>
+            </tr>
+            </table>
 
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=47282b4127afbbe7e842ae13c6675ed4"></script>
         <script>    
@@ -86,9 +95,7 @@
             
             // 이미지 지도를 생성합니다
             var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
-            </script>             </td>
-            </tr>
-        </table>
+            </script>         
         <script>
             function speak(text) {
                 if (typeof SpeechSynthesisUtterance === "undefined" || typeof window.speechSynthesis === "undefined") {
