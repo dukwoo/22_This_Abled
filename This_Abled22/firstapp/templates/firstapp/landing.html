@@ -29,11 +29,11 @@
             <div class="row my-5">
                 <div class="col">
                     <div id="main_word">
-                        <h3><strong>장애인의 삶에 보탬이 되는 인생 가이드</strong></h3><br>
+                        <h3><strong onclick="speak(this.innerHTML)">장애인의 삶에 보탬이 되는 인생 가이드</strong></h3><br>
                         <h6 style="color: #757575">
-                            장애인이 자신과 맞는 일자리 혹은 취미가 무엇인지<br>
-                            테스트를 통해 탐색할 수 있고,<br>
-                            커뮤니티에서 자유롭게 의사소통할 수 있는 사이트입니다.
+                            <div onclick="speak('장애인이 자신과 맞는 일자리 혹은 취미가 무엇인지 테스트를 통해 탐색할 수 있고,커뮤니티에서 자유롭게 의사소통할 수 있는 사이트입니다.')">장애인이 자신과 맞는 일자리 혹은 취미가 무엇인지</div>
+                            <div>테스트를 통해 탐색할 수 있고,</div>
+                            <div>커뮤니티에서 자유롭게 의사소통할 수 있는 사이트입니다.</div>
                         </h6>
                     </div>
                 </div>
@@ -47,11 +47,11 @@
                             <img id="b_job" src="{% static 'firstapp/image/병일자리.png' %}" alt="일자리_ThisAbled">
                         </span>
                         <div class="card-body">
-                            <p id="t_job" class="card-text">
+                            <p id="t_job" class="card-text" onclick="speak('본인에게 맞는 직업 유형은 무엇일까요? 궁금하다면 여기서 테스트 해보세요!')">
                                 본인에게 맞는 직업 유형은 무엇일까요? <br>
                                 궁금하다면 여기서 테스트 해보세요!
                             </p>
-                            <a id="c_job" href="/start_job_test/" class="btn btn-primary rounded-pill">
+                            <a id="c_job" href="/start_job_test/" class="btn btn-primary rounded-pill" onclick="speak('일자리 테스트')">
                                 일자리 테스트 &nbsp; <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -65,11 +65,11 @@
                             <img id="b_hobby" src="{% static 'firstapp/image/병취미.png' %}" alt="취미_ThisAbled">
                         </span>
                         <div class="card-body">
-                            <p id="t_hobby" class="card-text">
+                            <p id="t_hobby" class="card-text" onclick="speak('본인에게 맞는 취미 유형은 무엇일까요? 궁금하다면 여기서 테스트 해보세요!')">
                                 본인에게 맞는 취미 유형은 무엇일까요? <br>
                                 궁금하다면 여기서 테스트 해보세요!
                             </p>
-                            <a id="c_hobby" href="/start_hobby_test/" class="btn btn-primary rounded-pill">
+                            <a id="c_hobby" href="/start_hobby_test/" class="btn btn-primary rounded-pill" onclick="speak('취미 테스트')">
                                 취미 테스트 &nbsp; <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -88,6 +88,55 @@
                 </div>
             </div>
         </div>
+        <script>
+            function speak(text) {
+                if (typeof SpeechSynthesisUtterance === "undefined" || typeof window.speechSynthesis === "undefined") {
+                    alert("이 브라우저는 음성 합성을 지원하지 않습니다.")
+                    return
+                }
+                window.speechSynthesis.cancel() // 현재 읽고있다면 초기화
+    
+                const prop = {
+                  rate: 0.9,
+                  pitch: 0.8,
+                  lang: "ko-KR"
+              } || {}
+    
+                const speechMsg = new SpeechSynthesisUtterance()
+                speechMsg.rate = prop.rate || 0.9 // 속도: 0.1 ~ 10      
+              speechMsg.pitch = prop.pitch || 0.8 // 음높이: 0 ~ 2
+              speechMsg.lang = prop.lang || "ko-KR"
+                speechMsg.text = text
+                
+                // SpeechSynthesisUtterance에 저장된 내용을 바탕으로 음성합성 실행
+                window.speechSynthesis.speak(speechMsg)
+            }
+    
+            // 이벤트 영역
+            const selectLang = document.getElementById("select-lang")
+            const text = document.getElementsByClassName('q1')
+  
+            let elements = document.getElementsByClassName('q1');  
+            // elements[0].addEventListener("click", e => {
+            //     alert(elements[0].value)
+            //     speak(elements[i].value, {
+            //         rate: 1,
+            //         pitch: 0.9,
+            //         lang: "ko-KR"
+            //     })
+            // })
+            // elements[1].addEventListener("click", e => {
+            //     alert(elements[1].value)
+            //     speak(elements[i].value, {
+            //         rate: 1,
+            //         pitch: 0.9,
+            //         lang: "ko-KR"
+            //     })
+            // })
+            
+            
+            
+        </script>
 
         <!--footer-->
         {% include 'firstapp/footer.html' %}
