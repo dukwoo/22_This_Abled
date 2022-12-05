@@ -1,0 +1,312 @@
+// 각각의 태그들을 찾아 변수에 대입. var 대신 const or let 사용. 
+// var: 변수 재선언 가능. | let: 변수 재할당만 가능. | const: 둘다 불가능. 
+
+const header = document.getElementById('header'); //index 40줄
+const footer = document.getElementById('footer'); //index 158줄
+const qna = document.getElementById('qna'); //index 70줄
+const u_name = document.querySelector('input[type=text]'); //index 60줄
+const wrap = document.getElementById('wrap'); //index body부분 전체 
+
+const tabletMQL = window.matchMedia("all and (min-width: 768px)"); //모바일
+const pcMQL = window.matchMedia("all and (min-width: 1024px)"); //pc
+const ENDPOINT = 8; //질문 개수 (수정)
+const select = []; //배열 변수 대입 
+let qIdx = -1;
+
+// goto 함수 정의 
+const goTo = (dest) => {
+  let elem;
+  let elemTop;
+  if (dest === 'artist') { //형변환을 하지 않고 연산(===)
+    elem = document.getElementById('intro-box');
+  } 
+  else {
+    elem = document.getElementById('share-box');
+  }
+  elemTop = window.pageYOffset + elem.getBoundingClientRect().top;
+  
+  if (pcMQL.matches) {
+    elemTop -= 150;
+  } 
+  else if (tabletMQL.matches) {
+    elemTop -= 115;
+  } 
+  else {
+    elemTop -= 60;
+  }
+  window.scroll({
+    behavior: 'smooth',
+    left: 0,
+    top: elemTop
+  });
+}
+
+//goArtist, goShare 함수 정의 (goTo 함수 호출)
+const goArtist = () => goTo('artist');
+const goShare = () => goTo('share'); //140줄 index
+
+const copy = () => {
+  const tmp = document.createElement('textarea'); //긴글 작성가능한 태그 생성
+  document.body.appendChild(tmp); //body태그의 마지막 자식에 추가 
+  tmp.value = url;
+  tmp.select();
+  
+  //execCommand: 현재 선택영역의 텍스트를 인자로 받은 값을 통해 변환. 인자='copy'
+  //선택 영역: 마우스로 텍스트를 드래그했을 때의 파란 박스 영역. 드래그한 부분 복사. 
+  document.execCommand('copy');
+  document.body.removeChild(tmp);
+}
+
+const calcScore = () => { //1~8번 질문의 총 점수를 계산하는 함수. 
+  let point = 0;
+  for (let i = 0; i < ENDPOINT; i++) { //0-7
+    point += qnaList[i].a[select[i]].score; //질문 안의 답변의 점수 
+  }
+  return point; //점수 반환 
+}
+
+//점수대로 결과를 분류 (num 숫자) "총 결과 수 = 7개"  (수정)
+const sortResult = (point) => { 
+  let num = 0;
+
+  if (point <= 21) { 
+    num = 0; //미어캣
+  } 
+  else if (point <= 28) { 
+    num = 1; //영양
+  } 
+  else if (point <= 35) { 
+    num = 2; //기린
+  } 
+  else if (point <= 42) { 
+    num = 3; //하마
+  } 
+  else if (point <= 49) {
+    num = 4; //치타
+  } 
+  else if (point <= 56) { 
+    num = 5; //하이에나
+  }
+  else { 
+    num = 6; //사자
+  }
+
+  return num;
+}
+
+const goResult = () => { //wrap은 body전체 부분 
+  if (pcMQL.matches) { //pc버전 
+    console.log('PC'); //console 객체는 개발자도구창(f12)을 열어서 콘솔창에서 확인 가능.
+    wrap.style.marginTop = '150px'; //body 부분 윗여백 150px 
+  } 
+  else if (tabletMQL.matches) { //모바일 버전
+    console.log('tablet');
+    wrap.style.marginTop = '115px'; //body 부분 윗여백 115px 
+  }
+
+  const result = document.getElementById('result'); //index 84줄 
+  const point = calcScore(); //총 점수를 변수에 대입.
+  const grade = sortResult(point); //점수 결과 분류 num의 값을 대입. 
+  
+  //querySelector(CSS 셀렉터) 그 이름을 가진 html 태그를 대입.(수정)?
+  const pTitle = document.querySelector('.p');
+  const res_point = document.querySelector('.point');
+  const pin = document.querySelector('.pin');
+  
+  //이미지 사진에도 각각 이름을 아래와 설정하기 ! (이미지 이름 수정)
+  const img_url = 'img/image-' + grade + '.png'; //점수대로 나눈 사진 url
+  const res_img = document.createElement('img'); //img객체 생성 
+  
+  const res_img_div = document.querySelector('.art');
+  const animal = document.querySelector('.result');
+  const desc = document.querySelector('.res');
+
+  //점수를 알려줄 필요
+  pTitle.innerHTML = u_name.value + ' 님의 점수는...'; //입력한 이름이 들어감.
+  res_point.innerHTML = point + '점';
+  pin.style.marginLeft = infoList[grade].mLeft;
+  //pin의 왼쪽 여백 = data.js의 infoList배열[num값]의 mLeft 프로퍼티값.
+
+  //생성된 img객체인 res_img의 속성값을 넣어줌. 
+  res_img.src = img_url;
+  res_img.alt = infoList[grade].name; //사진이 없으면 alt인 설명글이 대신 나옴.
+  res_img.title = infoList[grade].name; //사진에 마우스를 갖다대면 설명글이 나옴. 
+  
+  res_img_div.appendChild(res_img); //부모 객체에 추가함. 
+  
+  animal.innerHTML = infoList[grade].name;
+  desc.innerHTML = infoList[grade].desc;
+
+  // 일정 시간 후에 함수를 의도적으로 지연한 뒤 실행(1000=1s) 많이 사용됨!!
+  setTimeout(() => {
+    header.style.display = 'block';
+    footer.style.display = 'block';
+    result.style.display = 'block';
+    //애니메이션 단축 프로퍼티 animation(이름, 시간, fill-mode)
+    //forwards:애니메이션이 키프레임의 100%에 도달했을 때 마지막 키프레임을 유지.
+    //그 외에 backwards, none, both(둘 다 적용)등 존재.
+    header.style.animation =
+      'fade-in 0.3s forwards';
+    footer.style.animation =
+      'fade-in 0.3s forwards';
+    result.style.animation =
+      'going-up 0.5s, ' +
+      'fade-in 0.5s forwards';
+  }, 600); //0.6s
+  //방문자의 스크롤이 브라우저 일정 위치에 올 경우 몇 초 뒤에 애니메이션 실행.
+}
+
+const end = () => {
+  qna.style.animation = '';
+  
+  //setInterval 함수: 일정한 시간 간격으로 작업을 수행.(clearInterval함수로 중지 가능.)
+  const interval = setInterval(() => {
+    qna.style.opacity -= 0.1; //불투명도 
+    qna.style.transform = 'translateY(-1px)'; //qna태그를 -1px만큼 Y축으로 이동.
+  }, 50);
+  
+  setTimeout(() => clearTimeout(interval), 500); //0.5s 후에 실행. (시간 지연)
+  setTimeout(() => qna.style.display = 'none', 500);
+  setTimeout(() => {
+    const calc = document.getElementById('calc'); //index 77줄.
+    calc.style.display = 'block'; //block: 한 줄을 다 차지함. 
+    calc.style.animation =
+      'going-up 0.5s forwards, ' +
+      'fade-in 0.5s forwards';
+  }, 700); //0.7s 후에 함수 안에 내용 실행.
+  
+  setTimeout(() => {
+    calc.style.animation = ''; 
+    calc.style.animation =
+      'going-left 0.4s forwards, ' + //왼쪽으로 움직이고, 점점 사라지는 효과 
+      'fade-out 0.4s forwards';
+    setTimeout(() => {
+      calc.style.display = 'none';
+      goResult(); //pc, 모바일 버전 함수 
+    }, 400); //0.4s후에 실행.
+  }, 9000); //9s후에 실행. 
+}
+
+const addAnswer = (answerTxt, idx) => {
+  const answer = document.createElement('button'); //button 태그 생성. 
+  const a = document.querySelector('.answer'); 
+  //class="answer"인 CSS3의 그 이름을 가진 태그를 a에 대입. 
+  
+  answer.className += 'a box'; //버튼 태그 class 명. 
+  answer.innerHTML = answerTxt; //버튼 태그 안에 들어갈 내용물. 
+
+  //answer에 대입된 버튼 태그에 클릭 이벤트 추가. 
+  answer.addEventListener('click', () => {
+    const parent = answer.parentNode; //?노드 
+    const children = parent.childNodes;
+    for (let i in children) {
+      children[i].disabled = true; 
+      //disabled 속성 값을 true로 대입. 명시하지 않으면 자동 false. 
+    }
+    parent.classList.add('fade-out-5-4'); //?
+    setTimeout(() => { 
+      select[qIdx] = idx;
+      a.innerHTML = '';
+      parent.classList.remove('fade-out-5-4');
+      goNext();
+    }, 800); //0.8s 후에 실행.
+  });
+
+ 
+ //let qIdx = -1; 맨 위에 선언. 
+  setTimeout(() => answer.style.animation =
+    'going-down 0.25s forwards, fade-in 0.25s forwards', 50); //0.05s 후에 실행.
+  a.appendChild(answer); //버튼태그를 a 부모태그 마지막에 추가.
+}
+
+
+const goNext = () => { //질문의 개수가 0개이면 끝내기 .
+  if (qIdx++ === qnaList.length - 1) {
+    end();
+    return;
+  }
+
+  const status = document.querySelector('.status');
+  const qNum = qnaList[qIdx];
+  const q = document.querySelector('.q');
+
+  status.style.width = (ENDPOINT * (qIdx + 2)) + '%';
+  q.innerHTML = qNum.q;
+  qna.style.animation =
+    'fade-in 0.3s ease-in-out 0.4s forwards, ' +
+    'going-down 0.3s ease-in-out 0.4s forwards';
+
+  setTimeout(() => { 
+    const endIdx = qNum.a.length - 1;
+    for (let i in qNum.a) {
+      addAnswer(qNum.a[i].answer, i);
+    }
+    qna.style.opacity = 1; //불투명도=1
+  }, 700); //0.7s 후에 함수 내용이 실행. 
+}
+
+const begin = () => {
+  const welcome = document.getElementById('welcome'); //index 43줄
+  header.style.animation =
+    'going-up 0.4s forwards, ' +
+    'fade-out 0.4s forwards';
+  footer.style.animation =
+    'going-down 0.4s forwards, ' +
+    'fade-out 0.4s forwards';
+  setTimeout(() => welcome.style.animation =
+    'going-up 0.4s ease-in-out forwards, ' +
+    'fade-out 0.4s ease-in-out forwards', 500); //0.5s후에 실행. 
+  setTimeout(() => {
+    header.style.display = 'none';
+    footer.style.display = 'none';
+    welcome.style.display = 'none';
+    qna.style.display = 'block';
+    if (pcMQL.matches) {
+      console.log('PC');
+      wrap.style.marginTop = '50px'; 
+    } 
+    else if (tabletMQL.matches) {
+      console.log('tablet');
+      wrap.style.marginTop = '30px';
+    }
+    goNext();
+  }, 1000); //1s후에 실행. 
+}
+
+const load = () => { //웹페이지가 로딩될 때 두가지 경우에 예외처리 설정. 
+  const msg = document.querySelector('.check-name');
+  const start_btn = document.querySelector('.start');
+
+  //u_name 변수에 대입된 태그에 blur 이벤트 추가. 포커스를 잃게 되는 현상. 
+  //addeventlistener 사용할 때 이벤트에 on 안붙힘.
+  u_name.addEventListener('blur', () => {
+    try {
+      if (u_name.value.length < 1) { //이름이 입력이 안되면(이름 글자수가 0이하 일 때)
+        throw '사원증을 제출하고 출발해 주세요!'; //이 글이 나옴. 
+      }
+      msg.innerHTML = ''; 
+    } 
+    catch (err) {
+      msg.innerHTML = err;
+    }
+  });
+  //try catch문 예외처리 (finally, throw: 예외 상황을 알림.)
+
+  //start_btn (모험 버튼)을 클릭할 때 발생하는 이벤트 리스너 추가. 
+  start_btn.addEventListener('click', () => {
+    try {
+      if (u_name.value.length < 1) { //이름 입력을 안하고 모험 버튼을 눌렀을 경우 
+        throw '사원증을 제출하고 출발해 주세요!'; //글이 나온다. 
+      }
+      msg.innerHTML = '';
+      start_btn.disabled = true; //disabled 속성을 true로 설정. 안하면 자동 false.
+      begin(); //그리고 나서 시작. 
+    } 
+    catch (err) {
+      msg.innerHTML = err;
+    }
+  });
+
+}
+
+window.onload = load(); //윈도우가 실행되면 load 함수가 실행됨. 
